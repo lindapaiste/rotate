@@ -2,11 +2,11 @@ import React from "react";
 import {View} from "react-native";
 import {Text} from "react-native-paper";
 import {SimpleLineIcons as Icon} from "@expo/vector-icons";
-import {I_WinScreenProps} from "../../universalGame/components/types-components";
+import {WinScreenProps} from "../../universalGame/components/types-components";
 import {createWinScreen} from "./CreateWinScreen";
 
 
-export const BasicBody = ({current, previousBest, booleans, minimumMoves}: I_WinScreenProps) => (
+export const BasicBody = ({current, previousBest, booleans, minimumMoves}: WinScreenProps) => (
     <View>
         <Text>Moves: {current.moves}</Text>
         {!!minimumMoves && <Text>Fewest Possible Moves: {minimumMoves}</Text>}
@@ -19,7 +19,7 @@ export const BasicBody = ({current, previousBest, booleans, minimumMoves}: I_Win
 /**
  * is this the title component, or just the text?
  */
-export const BasicTitle = ({booleans}: I_WinScreenProps) => (
+export const BasicTitle = ({booleans}: WinScreenProps) => (
     <>{booleans.isPerfect ? "Perfect!" : "You Win!"}</>
 )
 

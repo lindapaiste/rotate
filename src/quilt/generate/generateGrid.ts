@@ -1,10 +1,10 @@
 import {I_Size, PropTileSize} from "../../grid/types";
 import {makeArray, random, randomHexes, sample} from "../../lib";
-import {SideColors} from "../square/types";
+import {SideColors} from "../tile/types";
 import {QuiltState} from "../../state/quilt/types";
 import {newLevelState} from "../../state/generic/emptyState";
-import {CreationProps, GridColors} from "./types";
 import {InitialTile} from "../../state/generic/types";
+import {CreationProps, GridColors} from "./types";
 
 /**
  *  for a grid which is x squares wide and y squares tall,
@@ -36,7 +36,7 @@ export const gridToSquares = ({grid, width, height}: { grid: GridColors } & I_Si
 
 export const generateSquares = (props: CreationProps): SideColors[][] => {
     const grid = generateGrid(props);
-    console.log(grid);
+    // console.log(grid);
     return gridToSquares({...props, grid});
 }
 

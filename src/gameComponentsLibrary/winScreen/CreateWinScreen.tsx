@@ -1,5 +1,5 @@
 import React, {ComponentType, ReactNode} from "react";
-import {I_WinScreenProps, TransitionProps} from "../../universalGame/components/types-components";
+import {WinScreenProps, TransitionProps} from "../../universalGame/components/types-components";
 import {SimpleLineIcons as Icon} from "@expo/vector-icons";
 import {Button, Divider, Surface, Text, Title} from "react-native-paper";
 import {View} from "react-native";
@@ -10,7 +10,7 @@ import {View} from "react-native";
  * other optional props control texts and icons
  */
 
-type WProps = I_WinScreenProps & TransitionProps;
+type WProps = WinScreenProps & TransitionProps;
 
 type Node = ReactNode | ((props: WProps) => ReactNode);
 
@@ -76,7 +76,7 @@ export const createWinScreen = (_createProps: Props) => {
 
     const {body, title, continueIcon, continueText, replayIcon, replayText, divider, showStars} = createProps;
 
-    return (props: TransitionProps & I_WinScreenProps) => {
+    return (props: TransitionProps & WinScreenProps) => {
 
         const {levelId, packId, current, previousBest, onPressNext, onPressReplay, loadingIn, loadingOut, hasNextLevel, minimumMoves, booleans} = props;
 

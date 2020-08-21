@@ -1,5 +1,5 @@
 import {Victory} from "../../universalGame/state/types-state";
-import {I_LevelThumbProps, I_RenderPackProps} from "../../universalGame/components/types-components";
+import {LevelThumbProps, RenderPackProps} from "../../universalGame/components/types-components";
 import {ComponentType} from "react";
 import {ViewStyle} from "react-native";
 
@@ -11,7 +11,7 @@ export interface GridSizingProps {
     aspectRatio?: number;
 }
 
-export interface ThumbProps extends I_LevelThumbProps<{}> {
+export interface ThumbProps extends LevelThumbProps<{}> {
     size: number;
     aspectRatio?: number;
     levelId: number;
@@ -21,7 +21,7 @@ export interface ThumbProps extends I_LevelThumbProps<{}> {
 }
 
 export type GridProps<T> =
-    Pick<I_RenderPackProps<T>, 'levels' | 'onPressLevel'> &
+    Pick<RenderPackProps<T>, 'levels' | 'onPressLevel'> &
     Pick<ThumbProps, 'size' | 'aspectRatio'> & {
     RenderThumb: ComponentType<ThumbProps>
     style?: ViewStyle,

@@ -1,4 +1,4 @@
-import {SideColors} from "../../quilt/square/types";
-import {I_State} from "../generic/types";
+import {SideColors} from "../../quilt/tile/types";
+import {LevelState} from "../generic/types";
 
-export type QuiltState = I_State<SideColors>;
+export type QuiltState = LevelState<SideColors>;

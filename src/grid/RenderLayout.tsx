@@ -1,45 +1,34 @@
-import React, {ComponentType, useEffect, useRef} from "react";
+import React, {ComponentType} from "react";
 import TilesArea from "./TilesArea";
 import {LevelConnected, RenderTileProps} from "./types";
-import {rotate, startTimer} from "../state/generic/actions";
-import {Animated, TouchableHighlight} from "react-native";
-import {RotationHandler} from "./RotationHandler";
+import {rotate} from "../state/generic/actions";
+import {Animated, TouchableHighlight, TouchableWithoutFeedback} from "react-native";
+import {RotationHandler} from "../effects/RotationHandler";
 import {getLayout} from "../state/generic/selectors";
-import {TransitionProps} from "../universalGame/components/types-components";
+import {TileLoadIn} from "../effects/TileLoadIn";
+import {TileLoadOut} from "../effects/TileLoadOut";
+import {PropTimers} from "../effects/types";
 
 export type Props<T> = LevelConnected<T> & {
     RenderTile: ComponentType<RenderTileProps<T>>;
 }
 
 /**
+ * receives the animation timers from QuiltLevel -- moving state up
+ *
  * use a generic state and dispatch
  * not using PositionedTile because would need to forward setNativeProps
  */
 
-export const RenderLayout = <T extends any = any>({state, dispatch, RenderTile, loadingIn, loadingOut, endTransition}: Props<T> & TransitionProps) => {
+export const RenderLayout = <T extends any = any>({state, dispatch, RenderTile, loadInTimer, loadOutTimer}: Props<T> & PropTimers) => {
 
     const layout = getLayout(state);
-    const {tileSize, rotationIncrement = 90} = layout;
+    const {width, height, tileSize, rotationIncrement = 90} = layout;
 
-    const loadInAnim = useRef(new Animated.Value(0)).current;
-
-    useEffect(() => {
-        if (loadingIn) {
-            Animated.timing(loadInAnim, {
-                toValue: 1,
-                duration: 2000,
-                useNativeDriver: true,
-            }).start(() => {
-                endTransition();
-                dispatch(startTimer());
-            })
-        }
-        //need to reset
-    }, [loadingIn])
 
     const center = {
-        x: .5 * layout.width * tileSize,
-        y: .5 * layout.height * tileSize,
+        x: .5 * width * tileSize,
+        y: .5 * height * tileSize,
     }
 
     return (
@@ -58,9 +47,10 @@ export const RenderLayout = <T extends any = any>({state, dispatch, RenderTile, 
                 {...layout}
             >
                 {state.tiles.map((tile, id) => (
-                    <TouchableHighlight
+                    <TouchableWithoutFeedback
+                        // using TouchableWithoutFeedback instead of highlight because of "sticking" issue in testing
                         key={id}
-                        onPress={() => dispatch(rotate(id))}
+                        onPressIn={() => dispatch(rotate(id))}
                     >
                         <Animated.View
                             style={{
@@ -69,40 +59,31 @@ export const RenderLayout = <T extends any = any>({state, dispatch, RenderTile, 
                                 top: tile.position.y * tileSize,
                             }}
                         >
-                            <Animated.View
-                                style={{
-                                    transform: [
-                                        {
-                                            scale: loadInAnim.interpolate({
-                                                inputRange: [0, .5, .75, 1],
-                                                outputRange: [1, 1, .5, 1],
-                                            })
-                                        },
-                                        {
-                                            rotate: loadInAnim.interpolate({
-                                                inputRange: [.5, 1],
-                                                outputRange: [-1 * rotationIncrement * state.rotations[id] + "deg", "0deg"],
-                                                extrapolate: "clamp",
-                                            })
-                                        }
-                                    ]
-                                }}
+                            <RotationHandler
+                                rotations={state.rotations[id]}
+                                increment={rotationIncrement}
                             >
-                                <RotationHandler
-                                    rotations={state.rotations[id]}
-                                    increment={rotationIncrement}
+                                <TileLoadIn
+                                    timing={loadInTimer}
+                                    rotation={rotationIncrement * state.rotations[id]}
                                 >
-                                    <RenderTile
-                                        {...tile.position}
-                                        tileSize={tileSize}
-                                        key={id}
-                                        id={id}
-                                        data={tile.data}
-                                    />
-                                </RotationHandler>
-                            </Animated.View>
+                                    <TileLoadOut
+                                        timing={loadOutTimer}
+                                        xRel={tile.position.x / width}
+                                        yRel={tile.position.y / height}
+                                    >
+                                        <RenderTile
+                                            {...tile.position}
+                                            tileSize={tileSize}
+                                            key={id}
+                                            id={id}
+                                            data={tile.data}
+                                        />
+                                    </TileLoadOut>
+                                </TileLoadIn>
+                            </RotationHandler>
                         </Animated.View>
-                    </TouchableHighlight>
+                    </TouchableWithoutFeedback>
                 ))}
             </TilesArea>
         </Animated.View>

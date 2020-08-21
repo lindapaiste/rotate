@@ -1,7 +1,7 @@
-import {I_State} from "../state/generic/types";
+import {LevelState} from "../state/generic/types";
 import {ComponentType, Dispatch} from "react";
 import {ActionTypes} from "../state/generic/actions";
-import {I_Point} from "../quilt/square/types";
+import {I_Point} from "../quilt/tile/types";
 
 export interface I_Size {
     width: number;
@@ -13,7 +13,7 @@ export interface PropTileSize {
 }
 
 export interface LevelConnected<T> {
-    state: I_State<T>;
+    state: LevelState<T>;
     dispatch: Dispatch<ActionTypes<T>>;
 }
 

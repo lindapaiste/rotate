@@ -1,0 +1,82 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/21/Georgia_O%27Keeffe_-_Lake_George_Reflection.jpg",
+      "width": 3068,
+      "height": 1797,
+      "artist": "Georgia O'Keeffe",
+      "title": "Georgia O'Keeffe - Lake George Reflection",
+      "license": "pd",
+      "credit": "Christie's",
+      "year": {
+        "text": "circa 1921–1922",
+        "number": 1921
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Georgia_O%27Keeffe%2C_Series_1%2C_No._8.jpg",
+      "width": 557,
+      "height": 682,
+      "artist": "Georgia O'Keeffe",
+      "title": "Georgia O'Keeffe, Series 1, No. 8",
+      "license": "pd",
+      "credit": "https://whitney.org/uploads/image/file/820458/medium_okeeffe_series_ino._8.jpg via https://whitney.org/Exhibitions/GeorgiaOKeeffe; http://www.doverpublications.com/sampler/1118/art9b.htm",
+      "year": {
+        "text": "1919",
+        "number": 1919
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/82/Georgia_O%27Keeffe_Red_Canna_1915_Yale_University_Art_Gallery.tif",
+      "width": 368,
+      "height": 546,
+      "artist": "Georgia O'Keeffe",
+      "title": "Georgia O'Keeffe Red Canna 1915 Yale University Art Gallery",
+      "license": "pd",
+      "credit": "Yale University Art Gallery",
+      "year": {
+        "text": "1915",
+        "number": 1915
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Series_I%2C_No._8_%28Georgia_O%27Keeffe%29_DSC1720.jpg",
+      "width": 3375,
+      "height": 4179,
+      "artist": "Georgia O'Keeffe",
+      "title": "Series I, No. 8",
+      "license": "pd",
+      "credit": "Wuselig",
+      "year": {
+        "text": "16 November 2019, 12:21:18",
+        "number": 2019
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Series_I%2C_No._4_%28Georgia_O%27Keeffe%29_DSC1722.jpg",
+      "width": 3844,
+      "height": 4665,
+      "artist": "Georgia O'Keeffe",
+      "title": "Series I, No. 4",
+      "license": "pd",
+      "credit": "Wuselig",
+      "year": {
+        "text": "1918",
+        "number": 1918
+      }
+    }
+  }
+  ]

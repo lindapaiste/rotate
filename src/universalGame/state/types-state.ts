@@ -57,17 +57,25 @@ export interface PackShared<L> {
     initialUnlocked: boolean;
     infinite: boolean;
     levels?: L[];
-    getLevel?( levelId: number ): L;
 }
 
+/**
+ * if a pack is not infinite, then it must contain an array of level props
+ */
 export interface DefinedPack<L> extends PackShared<L> {
     infinite: false;
     levels: L[];
 }
 
+/**
+ * infinite packs should not have their getLevel() function stored in state because
+ * it is bad practice to store non-serializable objects such as functions
+ *
+ * instead, leave it up to the game instance to know how to handle an infinite level
+ * this means that a separate component is needed for rendering a level without known props
+ */
 export interface InfinitePack<L> extends PackShared<L> {
     infinite: true;
-    getLevel( levelId: number ): L;
 }
 
 /**

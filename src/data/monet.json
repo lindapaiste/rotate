@@ -1,0 +1,2486 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Still_Life_with_Bottle%2C_Carafe%2C_Bread%2C_and_Wine_A26263.jpg",
+      "width": 4000,
+      "height": 2633,
+      "artist": "Claude Monet",
+      "title": "Still Life with Bottle, Carafe, Bread, and Wine",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "circa 1862 /1863",
+        "number": 1862
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Waterloo_Bridge%2C_London%2C_at_Sunset_E11705.jpg",
+      "width": 3147,
+      "height": 2221,
+      "artist": "Claude Monet",
+      "title": "Waterloo Bridge, London, at Sunset",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1904",
+        "number": 1904
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/f0/The_Seine_at_Giverny_sc001308.jpg",
+      "width": 2940,
+      "height": 2378,
+      "artist": "Claude Monet",
+      "title": "The Seine at Giverny",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1897",
+        "number": 1897
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Morning_Haze_sc000969.jpg",
+      "width": 3000,
+      "height": 2386,
+      "artist": "Claude Monet",
+      "title": "Morning Haze",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1888",
+        "number": 1888
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Cliffs_at_Pourville_A21450.jpg",
+      "width": 4000,
+      "height": 2386,
+      "artist": "Claude Monet",
+      "title": "Cliffs at Pourville",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1882",
+        "number": 1882
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Woman_Seated_under_the_Willows_E11686.jpg",
+      "width": 2205,
+      "height": 3000,
+      "artist": "Claude Monet",
+      "title": "Woman Seated under the Willows",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1880",
+        "number": 1880
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Jerusalem_Artichoke_Flowers_E10330.jpg",
+      "width": 12622,
+      "height": 17418,
+      "artist": "Claude Monet",
+      "title": "Jerusalem Artichoke Flowers",
+      "license": "pd",
+      "credit": "National Gallery of Art, Washington, D. C., online collection",
+      "year": {
+        "text": "1880",
+        "number": 1880
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/The_Artist%27s_Garden_in_Argenteuil_%28A_Corner_of_the_Garden_with_Dahlias%29_A12382.jpg",
+      "width": 4000,
+      "height": 3005,
+      "artist": "Claude Monet",
+      "title": "The Artist's Garden in Argenteuil (A Corner of the Garden with Dahlias)",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1873",
+        "number": 1873
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Argenteuil_A14692.jpg",
+      "width": 4000,
+      "height": 3071,
+      "artist": "Claude Monet",
+      "title": "Argenteuil",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "circa 1872",
+        "number": 1872
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/84/Sainte-Adresse_A12549.jpg",
+      "width": 4000,
+      "height": 2786,
+      "artist": "Claude Monet",
+      "title": "Sainte-Adresse",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1867",
+        "number": 1867
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/34/The_Cradle_-_Camille_with_the_Artist%27s_Son_Jean_A14894.jpg",
+      "width": 3066,
+      "height": 4000,
+      "artist": "Claude Monet",
+      "title": "The Cradle - Camille with the Artist's Son Jean",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1867",
+        "number": 1867
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Bazille_and_Camille_%28Study_for_D%C3%A9jeuner_sur_l%27Herbe%29_A35075.jpg",
+      "width": 2975,
+      "height": 4000,
+      "artist": "Claude Monet",
+      "title": "Bazille and Camille (Study for \"Déjeuner sur l'Herbe\")",
+      "license": "pd",
+      "credit": "image courtesy National Gallery of Art",
+      "year": {
+        "text": "1865",
+        "number": 1865
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/b/b7/The-moreno-garden-at-bordighera.jpg",
+      "width": 2000,
+      "height": 1575,
+      "artist": "Claude Monet",
+      "title": "The-moreno-garden-at-bordighera",
+      "license": "pd",
+      "credit": "http://www.google.de/imgres?imgurl=http://uploads5.wikiart.org/images/claude-monet/the-moreno-garden-at-bordighera.jpg&imgrefurl=http://www.wikiart.org/en/claude-monet/the-moreno-garden-at-bordighera&h=1575&w=2000&tbnid=l4-mZg7x7ujQ8M:&tbnh=90&tbnw=114&usg=__raxVdh05vpC0ncc0yZcRdqsT2f4=&docid=tqnqj2ofnYaqvM&sa=X&ved=0CCQQ9QEwAWoVChMIpLz_-aCQyQIVBkYPCh1lHAfz",
+      "year": {
+        "text": "2015-11-14",
+        "number": 2015
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Claude_Monet_and_his_Paintings_%281899%29_003.png",
+      "width": 6000,
+      "height": 9133,
+      "artist": "William H. Fuller, Theodore Robinson",
+      "title": "Claude Monet and his Paintings (1899) 003",
+      "license": "pd",
+      "credit": "https://archive.org/details/frick-31072002281709",
+      "year": {
+        "text": "1899-01-01",
+        "number": 1899
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a3/23_jan_15_monet_pont_neuf.jpg",
+      "width": 560,
+      "height": 410,
+      "artist": "Claude Monet",
+      "title": "Le Pont Neuf",
+      "license": "pd",
+      "credit": "Dallas Museum of Art",
+      "year": {
+        "text": "1871",
+        "number": 1871
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/The_Book_of_the_Homeless_%28New_York%2C_Charles_Scribner%27s_Sons%2C_1916%29_69.png",
+      "width": 2634,
+      "height": 1359,
+      "artist": "w:Claude Monet",
+      "title": "The Book of the Homeless (New York, Charles Scribner's Sons, 1916) 69",
+      "license": "pd",
+      "credit": "https://archive.org/details/bookofhomelessle00whar",
+      "year": {
+        "text": "1916",
+        "number": 1916
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/70/Los_nen%C3%BAfares_%28Monet%29.jpg",
+      "width": 4248,
+      "height": 2706,
+      "artist": "Claude Monet",
+      "title": "Los nenúfares (Monet)",
+      "license": "pd",
+      "credit": "Own work",
+      "year": {
+        "text": "",
+        "number": null
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Claude_Monet%2C_The_Water_Lily_Pond%2C_c._1917-19%2C_frame_cropped%2C_Google_Art_Project.jpg",
+      "width": 6760,
+      "height": 3383,
+      "artist": "Claude Monet",
+      "title": "The Water Lily Pond, c. 1917-19",
+      "license": "pd",
+      "credit": "8wEdI9HpdIuC7g at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "c. 1917-19",
+        "number": 1917
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Claude_Monet_-_Regnv%C3%A6r%2C_Etretat_-_Google_Art_Project.jpg",
+      "width": 6350,
+      "height": 5173,
+      "artist": "Claude Monet",
+      "title": "Regnvær, Etretat",
+      "license": "pd",
+      "credit": "hAGxTh_ktg_DlQ at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1886",
+        "number": 1886
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Claude_Monet_-_Spring_by_the_Seine_-_Google_Art_Project.jpg",
+      "width": 6742,
+      "height": 5446,
+      "artist": "Claude Monet",
+      "title": "Spring by the Seine",
+      "license": "pd",
+      "credit": "5gEwCIKVPWkiLg at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1875",
+        "number": 1875
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Claude_Monet_-_The_Windmill_on_the_Onbekende_Gracht%2C_Amsterdam_-_Google_Art_Project.jpg",
+      "width": 2400,
+      "height": 2039,
+      "artist": "Claude Monet",
+      "title": "The Windmill on the Onbekende Gracht, Amsterdam",
+      "license": "pd",
+      "credit": "HAFkBhubsM3PNg at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1874",
+        "number": 1874
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/89/Claude_Monet_-_The_Japanese_Footbridge%2C_Giverny_-_Google_Art_Project.jpg",
+      "width": 2401,
+      "height": 2289,
+      "artist": "Claude Monet",
+      "title": "The Japanese Footbridge, Giverny",
+      "license": "pd",
+      "credit": "ZgHq2g3OJAagbA at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1920/1924",
+        "number": 1920
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Claude_Monet_-_Waterlilies_-_Google_Art_Project_%28hgEnPzjBK2STHg%29.jpg",
+      "width": 2600,
+      "height": 3287,
+      "artist": "Claude Monet",
+      "title": "Waterlilies",
+      "license": "pd",
+      "credit": "hgEnPzjBK2STHg at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1907",
+        "number": 1907
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Claude_Monet_-_The_Japanese_Bridge_-_Google_Art_Project.jpg",
+      "width": 2245,
+      "height": 1725,
+      "artist": "Claude Monet",
+      "title": "The Japanese Bridge",
+      "license": "pd",
+      "credit": "YwELWPy0uifR8w at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1918/1924",
+        "number": 1918
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/28/Claude_Monet_-_The_Water-lily_Pond_-_Google_Art_Project.jpg",
+      "width": 5001,
+      "height": 1100,
+      "artist": "Claude Monet",
+      "title": "The Water-lily Pond",
+      "license": "pd",
+      "credit": "1QEejqDnhMCtGQ at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1917/1920",
+        "number": 1917
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/Claude_Monet_-_Rocks_at_Belle-lle%2C_Port-Domois_-_Google_Art_Project.jpg",
+      "width": 3292,
+      "height": 4133,
+      "artist": "Claude Monet",
+      "title": "Rocks at Belle-lle, Port-Domois",
+      "license": "pd",
+      "credit": "HAHXgPLFma1p1Q at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1886-01-01/1886-12-31",
+        "number": 1886
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/da/Claude_Monet_-_Still_Life_with_Pheasants_and_Plovers_-_Google_Art_Project.jpg",
+      "width": 5251,
+      "height": 3971,
+      "artist": "Claude Monet",
+      "title": "Still Life with Pheasants and Plovers",
+      "license": "pd",
+      "credit": "LwFTfTOefsJrxA at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1879",
+        "number": 1879
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Claude_Monet_-_Grainstack%2C_Sun_in_the_Mist_-_Google_Art_Project.jpg",
+      "width": 5801,
+      "height": 3463,
+      "artist": "Claude Monet",
+      "title": "Grainstack, Sun in the Mist",
+      "license": "pd",
+      "credit": "cQHBeghhc30ymw at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Claude_Monet_-_Waterlilies_-_Google_Art_Project_%28vAGI5qXsGEMS2A%29.jpg",
+      "width": 3259,
+      "height": 3115,
+      "artist": "Claude Monet",
+      "title": "French:  Les NymphéasWaterlilies",
+      "license": "pd",
+      "credit": "vAGI5qXsGEMS2A at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1904",
+        "number": 1904
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/89/Claude_Monet_-_The_Break-up_of_the_Ice_%28La_D%C3%A9b%C3%A2cle_or_Les_Gla%C3%A7ons%29_-_Google_Art_Project.jpg",
+      "width": 2993,
+      "height": 1869,
+      "artist": "Claude Monet",
+      "title": "The Break-up of the Ice (La Débâcle or Les Glaçons)",
+      "license": "pd",
+      "credit": "_AFthnKMtjlCfA at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1880",
+        "number": 1880
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/82/Claude_Monet_-_Winter_Landscape_with_Evening_Sky_-_Google_Art_Project.jpg",
+      "width": 2501,
+      "height": 1698,
+      "artist": "Claude Monet",
+      "title": "Winter Landscape with Evening Sky",
+      "license": "pd",
+      "credit": "IwEiMRx5sRjG-w at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1870",
+        "number": 1870
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/42/3607_Paisaje_en_Port-Villez.jpg",
+      "width": 850,
+      "height": 684,
+      "artist": "Claude Monet",
+      "title": "Landscape in Port-Villez",
+      "license": "pd",
+      "credit": "",
+      "year": {
+        "text": "1883",
+        "number": 1883
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Claude_Monet_-_Le_Bloc.jpg",
+      "width": 1049,
+      "height": 829,
+      "artist": "Claude Monet",
+      "title": "Study of rocks, Creuse",
+      "license": "pd",
+      "credit": "Artbook Monet in the '90s",
+      "year": {
+        "text": "1889",
+        "number": 1889
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Maisons_%C3%A0_Argenteuil_par_Claude_Monet.jpg",
+      "width": 2305,
+      "height": 1696,
+      "artist": "Claude PIARD",
+      "title": "Maisons à Argenteuil par Claude Monet",
+      "license": "pd",
+      "credit": "Unknown source",
+      "year": {
+        "text": "1 April 2014, 17:49:31",
+        "number": 2014
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Cabane_des_douaniers%2C_effet_d%E2%80%99apr%C3%A8s-midi_%28Claude_Monet%29.jpg",
+      "width": 1068,
+      "height": 745,
+      "artist": "Claude Monet (photographie Alban Gilbert)",
+      "title": "Cabane des douaniers, effet d’après-midi (Claude Monet)",
+      "license": "pd",
+      "credit": "Musée national des douanes",
+      "year": {
+        "text": "8 November 2010, 11:31:23",
+        "number": 2010
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Monet%2C_A_Cart_on_the_Snowy_Road_at_Honfleur_%281865_or_1867%29.jpg",
+      "width": 3500,
+      "height": 2410,
+      "artist": "Claude Monet",
+      "title": "Monet, A Cart on the Snowy Road at Honfleur (1865 or 1867)",
+      "license": "pd",
+      "credit": "Nevsepic.com",
+      "year": {
+        "text": "1865 or 1867",
+        "number": 1865
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Claude_Monet%2C_1882_-_L%27%C3%89glise_de_Varengeville%2C_effet_matinal.jpg",
+      "width": 1500,
+      "height": 1226,
+      "artist": "Claude Monet",
+      "title": "Claude Monet, 1882 - L'Église de Varengeville, effet matinal",
+      "license": "pd",
+      "credit": "Unknown source",
+      "year": {
+        "text": "1882",
+        "number": 1882
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Monet_Luncheon.jpg",
+      "width": 1296,
+      "height": 1024,
+      "artist": "Claude Monet",
+      "title": "The Luncheon",
+      "license": "pd",
+      "credit": "http://www.wikiart.org/en/claude-monet/the-luncheon-1",
+      "year": {
+        "text": "1873",
+        "number": 1873
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/24/Le_bassin_aux_nymph%C3%A9as%2C_harmonie_rose_Claude_Monet.jpg",
+      "width": 500,
+      "height": 448,
+      "artist": "Claude Monet",
+      "title": "Le bassin aux nymphéas, harmonie rose Claude Monet",
+      "license": "pd",
+      "credit": "Musée d'Orsay official website",
+      "year": {
+        "text": "16 January 2015",
+        "number": 2015
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Maquette_du_bateau-atelier_de_Claude_Monet.jpg",
+      "width": 2816,
+      "height": 2112,
+      "artist": "Tangopaso",
+      "title": "Maquette du bateau-atelier de Claude Monet",
+      "license": "pd",
+      "credit": "Self-photographed",
+      "year": {
+        "text": "29 April 2015",
+        "number": 2015
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/de/Moreno_garden_%28Bordighera%29%2C_Claude_Monet.jpg",
+      "width": 762,
+      "height": 600,
+      "artist": "Claude Monet",
+      "title": "Moreno garden (Bordighera), Claude Monet",
+      "license": "pd",
+      "credit": "http://www.wikiart.org/en/claude-monet/the-moreno-garden-at-bordighera",
+      "year": {
+        "text": "1884",
+        "number": 1884
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Monet_Les_Promeneurs%2C_ou_Bazille_et_Camille.jpg",
+      "width": 640,
+      "height": 875,
+      "artist": "Claude Monet",
+      "title": "Monet Les Promeneurs, ou Bazille et Camille",
+      "license": "pd",
+      "credit": "http://givernews.com/?2011/01/29/1145-le-dejeuner-sur-l-herbe",
+      "year": {
+        "text": "1865",
+        "number": 1865
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Monet-olivi.jpg",
+      "width": 517,
+      "height": 640,
+      "artist": "Claude Monet",
+      "title": "Monet-olivi",
+      "license": "pd",
+      "credit": "Archivio Fondazione Pompeo Mariani",
+      "year": {
+        "text": "9 August 2015",
+        "number": 2015
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Le_Pont_d%60_Argenteuil_-_Claude_Monet.jpg",
+      "width": 3832,
+      "height": 2284,
+      "artist": "Claude Monet",
+      "title": "",
+      "license": "pd",
+      "credit": "This file, part of the Collection of the Fine Arts Museum, was provided to Wikimedia Commons thanks to an agreement between the  Museo Nacional de Bellas Artes and Wikimedia Argentina.",
+      "year": {
+        "text": "20 June 2015",
+        "number": 2015
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Le_Bassin_aux_nymph%C3%A9as%2C_harmonie_rose_-_Claude_Monet.jpg",
+      "width": 3699,
+      "height": 3231,
+      "artist": "Claude Monet",
+      "title": "Le Bassin aux nymphéas, harmonie rose",
+      "license": "pd",
+      "credit": "Self-photographed",
+      "year": {
+        "text": "1900",
+        "number": 1900
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9f/1902_Monet_Die_Waterloo-Br%C3%BCcke_anagoria.JPG",
+      "width": 4752,
+      "height": 3168,
+      "artist": "Claude Monet",
+      "title": "Waterloo-Bridge",
+      "license": "pd",
+      "credit": "anagoria",
+      "year": {
+        "text": "1902",
+        "number": 1902
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/61/Essai_de_figure_en_plein-air%2C_Femme_%C3%A0_l%27ombrelle_tourn%C3%A9e_vers_la_gauche_-_Claude_Monet.jpg",
+      "width": 2414,
+      "height": 3592,
+      "artist": "Claude Monet",
+      "title": "Essai de figure en plein-air : Femme à l'ombrelle tournée vers la gauche",
+      "license": "pd",
+      "credit": "Self-photographed",
+      "year": {
+        "text": "1886",
+        "number": 1886
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Le_Pont_d%27Argenteuil_-_Claude_Monet.jpg",
+      "width": 3462,
+      "height": 2524,
+      "artist": "Claude Monet",
+      "title": "Le Pont d'Argenteuil",
+      "license": "pd",
+      "credit": "Self-photographed",
+      "year": {
+        "text": "1874",
+        "number": 1874
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/96/La_Gare_Saint-Lazare_-_Claude_Monet.jpg",
+      "width": 3606,
+      "height": 2637,
+      "artist": "Claude Monet",
+      "title": "La Gare Saint-Lazare",
+      "license": "pd",
+      "credit": "Self-photographed",
+      "year": {
+        "text": "1877",
+        "number": 1877
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/39/%27Camille_in_the_Garden_with_Jean_and_a_Maid%27_by_Claude_Monet%2C_1873.jpg",
+      "width": 1359,
+      "height": 910,
+      "artist": "Claude Monet",
+      "title": "Camille in the Garden with Jean and a Maid",
+      "license": "pd",
+      "credit": "ArtDaily.com",
+      "year": {
+        "text": "1873",
+        "number": 1873
+      }
+    }
+  },
+  {
+    "status": "rejected",
+    "reason": {}
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Claude_Monet_-_Jean_Monet_on_his_Hobby_Horse.jpg",
+      "width": 5737,
+      "height": 4710,
+      "artist": "Claude Monet",
+      "title": "Jean Monet on his Hobby Horse",
+      "license": "pd",
+      "credit": "Unknown source",
+      "year": {
+        "text": "1872",
+        "number": 1872
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/89/Claude_Monet_-_Monet%27s_garden_at_V%C3%A9theuil_%281880%29.jpg",
+      "width": 2470,
+      "height": 3130,
+      "artist": "Claude Monet",
+      "title": "Monet's garden at Vétheuil",
+      "license": "pd",
+      "credit": "Washington, National Gallery of Art",
+      "year": {
+        "text": "1880",
+        "number": 1880
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Claude_Monet_Portrait_Michel_Pompom_Hat.JPG",
+      "width": 367,
+      "height": 482,
+      "artist": "Claude Monet",
+      "title": "Michel Monet au bonnet à pompon",
+      "license": "pd",
+      "credit": "user:Rlbberlin",
+      "year": {
+        "text": "1880",
+        "number": 1880
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/83/Claude_Monet_Gartenweg.jpg",
+      "width": 1024,
+      "height": 982,
+      "artist": "Claude Monet",
+      "title": "Claude Monet Gartenweg",
+      "license": "pd",
+      "credit": "",
+      "year": {
+        "text": "1902",
+        "number": 1902
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/21/Carri%C3%A8res-Saint-Denis_-_Claude_Monet.jpg",
+      "width": 3005,
+      "height": 2195,
+      "artist": "Claude Monet",
+      "title": "Carrières-Saint-Denis",
+      "license": "pd",
+      "credit": "Self-photographed",
+      "year": {
+        "text": "1872",
+        "number": 1872
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Claude_Monet_-_The_Luncheon_-_Google_Art_Project.jpg",
+      "width": 2501,
+      "height": 3893,
+      "artist": "Claude Monet",
+      "title": "The Luncheon",
+      "license": "pd",
+      "credit": "HQE7GwRtFZ6IrQ at Google Cultural Institute, zoom level maximum",
+      "year": {
+        "text": "1868",
+        "number": 1868
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Claude_Monet_-_Springtime_-_Google_Art_Project.jpg",
+      "width": 6587,
+      "height": 5038,
+      "artist": "Claude Monet",
+      "title": "Springtime",
+      "license": "pd",
+      "credit": "pAEsabNHoa1naA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1872",
+        "number": 1872
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/79/Claude_Monet_-_Weeping_Willow_-_Google_Art_Project.jpg",
+      "width": 3601,
+      "height": 2992,
+      "artist": "Claude Monet",
+      "title": "Weeping Willow",
+      "license": "pd",
+      "credit": "DgFwKpeOBWqGHA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1918–19",
+        "number": 1918
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Claude_Monet_-_La_Pointe_de_la_H%C3%A8ve_at_Low_Tide_-_Google_Art_Project.jpg",
+      "width": 5101,
+      "height": 3031,
+      "artist": "Claude Monet",
+      "title": "La Pointe de la Hève at Low Tide",
+      "license": "pd",
+      "credit": "1wF1kz5yJrRk5Q at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1865",
+        "number": 1865
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Claude_Monet_-_Water_Lilies_and_Japanese_Bridge_-_Google_Art_Project.jpg",
+      "width": 3451,
+      "height": 3451,
+      "artist": "Claude Monet",
+      "title": "Water Lilies and Japanese Bridge",
+      "license": "pd",
+      "credit": "PAFQhDlvL98Phg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1899",
+        "number": 1899
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Claude_Monet_-_The_Road_to_V%C3%A9theuil_-_Google_Art_Project.jpg",
+      "width": 4001,
+      "height": 3265,
+      "artist": "Claude Monet",
+      "title": "The Road to Vétheuil",
+      "license": "pd",
+      "credit": "7wHPKlnfBc-apA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1879",
+        "number": 1879
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/de/Claude_Monet_-_Val-Saint-Nicolas%2C_near_Dieppe_%28Morning%29_-_Google_Art_Project.jpg",
+      "width": 4001,
+      "height": 2599,
+      "artist": "Claude Monet",
+      "title": "Val-Saint-Nicolas, near Dieppe (Morning)",
+      "license": "pd",
+      "credit": "nQHoi43WVLCazg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1897",
+        "number": 1897
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Claude_Monet_-_Shadows_on_the_Sea._The_Cliffs_at_Pourville_-_Google_Art_Project.jpg",
+      "width": 4907,
+      "height": 3508,
+      "artist": "Claude Monet",
+      "title": "Shadows on the Sea. The Cliffs at Pourville",
+      "license": "pd",
+      "credit": "vwFdiq7sgbbuUQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1882",
+        "number": 1882
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/75/Claude_Monet_-_Water_Lilies_-_Google_Art_Project_%28431238%29.jpg",
+      "width": 7517,
+      "height": 3474,
+      "artist": "Claude Monet",
+      "title": "Water Lilies (Agapanthus)",
+      "license": "pd",
+      "credit": "dAEuBA4l1GeOtA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between circa 1915 and circa 1926",
+        "number": 1915
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Claude_Monet_-_The_Japanese_bridge_-_Google_Art_Project.jpg",
+      "width": 3247,
+      "height": 2481,
+      "artist": "Claude Monet",
+      "title": "The Japanese bridge",
+      "license": "pd",
+      "credit": "BAH_RGTYOlDCZA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between 1919 and 1924",
+        "number": 1919
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Claude_Monet_-_Wisteria_-_Google_Art_Project.jpg",
+      "width": 9463,
+      "height": 7188,
+      "artist": "Claude Monet",
+      "title": "Painting in the Gemeentemuseum Den Haag",
+      "license": "pd",
+      "credit": "EwEH4h2MbYBjOw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1925",
+        "number": 1925
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/26/Claude_Monet_-_The_Water_Lilies_-_Clear_Morning_with_Willows_-_Google_Art_Project.jpg",
+      "width": 8854,
+      "height": 1352,
+      "artist": "Claude Monet",
+      "title": "Le Matin clair aux saules",
+      "license": "pd",
+      "credit": "7QHpOuLSwKTH8A at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between 1914 and 1926",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/66/Claude_Monet_-_The_Water_Lilies_-_Setting_Sun_-_Google_Art_Project.jpg",
+      "width": 8714,
+      "height": 2892,
+      "artist": "Claude Monet",
+      "title": "Soleil couchant",
+      "license": "pd",
+      "credit": "qAG-qyFHUPm1kg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between 1914 and 1926",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Claude_Monet_-_The_Water_Lilies_-_Green_Reflections_-_Google_Art_Project.jpg",
+      "width": 8826,
+      "height": 2034,
+      "artist": "Claude Monet",
+      "title": "Reflets verts",
+      "license": "pd",
+      "credit": "-wEwoHEvFukepQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between 1914 and 1926",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Claude_Monet_-_The_Water_Lilies_-_The_Two_Willows_-_Google_Art_Project.jpg",
+      "width": 8892,
+      "height": 1002,
+      "artist": "Claude Monet",
+      "title": "Les Deux saules",
+      "license": "pd",
+      "credit": "3AEQUJnQ8YnB_A at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between 1914 and 1926",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Claude_Monet_-_The_Water_Lilies_-_The_Clouds_-_Google_Art_Project.jpg",
+      "width": 8889,
+      "height": 1345,
+      "artist": "Claude Monet",
+      "title": "Les Nuages",
+      "license": "pd",
+      "credit": "YQEt9_UVgiL-Og at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between 1914 and 1926",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Claude_Monet_-_The_Water_Lilies_-_Morning_-_Google_Art_Project.jpg",
+      "width": 8902,
+      "height": 1402,
+      "artist": "Claude Monet",
+      "title": "Matin",
+      "license": "pd",
+      "credit": "IAHgEdqp703amQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between 1914 and 1926",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/43/Claude_Monet_-_The_Water_Lilies_-_Tree_Reflections_-_Google_Art_Project.jpg",
+      "width": 8763,
+      "height": 1999,
+      "artist": "Claude Monet",
+      "title": "Reflets d'arbres",
+      "license": "pd",
+      "credit": "_QE0pUecImBBMQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "between 1914 and 1926",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Claude_Monet_-_La_Corniche_near_Monaco_-_Google_Art_Project.jpg",
+      "width": 3143,
+      "height": 2481,
+      "artist": "Claude Monet",
+      "title": "La Corniche near Monaco",
+      "license": "pd",
+      "credit": "QwEto4QimXEOzg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1884",
+        "number": 1884
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Claude_Monet_-_Mills_at_Westzijderveld_near_Zaandam_-_Google_Art_Project.jpg",
+      "width": 3508,
+      "height": 2247,
+      "artist": "Claude Monet",
+      "title": "Mills at Westzijderveld near Zaandam",
+      "license": "pd",
+      "credit": "EgE-3Zl0RsI49w at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1871",
+        "number": 1871
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Claude_Monet_-_Ladies_in_Flowers_-_Google_Art_Project.jpg",
+      "width": 2988,
+      "height": 2465,
+      "artist": "Claude Monet",
+      "title": "Ladies in Flowers",
+      "license": "pd",
+      "credit": "gQEFgyPV9iB7uw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1875",
+        "number": 1875
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Claude_Monet_-_Haystacks_-_Google_Art_Project.jpg",
+      "width": 5041,
+      "height": 4041,
+      "artist": "Claude Monet",
+      "title": "Haystacks",
+      "license": "pd",
+      "credit": "vAGC2rRYQIkfhg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1885",
+        "number": 1885
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Claude_Monet_-_Boulevard_des_Capucines_-_Google_Art_Project.jpg",
+      "width": 2959,
+      "height": 3992,
+      "artist": "Claude Monet",
+      "title": "French:  Le Boulevard des CapucinesBoulevard des Capucines",
+      "license": "pd",
+      "credit": "JQF8ZdIG2etsxw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "(1873 - 1874)",
+        "number": 1873
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Monet%2C_Claude_-_Charing_Cross_Bridge_-_Google_Art_Project.jpg",
+      "width": 5857,
+      "height": 4081,
+      "artist": "Claude Monet",
+      "title": "Charing Cross Bridge",
+      "license": "pd",
+      "credit": "rQGkwXwJa5PCAA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1900",
+        "number": 1900
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Monet%2C_Claude_-_The_Church_of_San_Giorgio_Maggiore%2C_Venice_-_Google_Art_Project.jpg",
+      "width": 6702,
+      "height": 4710,
+      "artist": "Claude Monet",
+      "title": "The church of San Giorgio Maggiore, Venice",
+      "license": "pd",
+      "credit": "QgHQ8UuEvA4xxQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1908",
+        "number": 1908
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Claude_Monet_-_Meules%2C_milieu_du_jour_%28Haystacks%2C_midday%29_-_Google_Art_Project.jpg",
+      "width": 6527,
+      "height": 4233,
+      "artist": "Claude Monet",
+      "title": "French:  Meules, milieu du jourHaystacks, midday",
+      "license": "pd",
+      "credit": "OQHHt5mlzUo9Qg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1890",
+        "number": 1890
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Claude_Monet_%28French_-_Wheatstacks%2C_Snow_Effect%2C_Morning_-_Google_Art_Project.jpg",
+      "width": 4651,
+      "height": 2996,
+      "artist": "Claude Monet (French, 1840 - 1926) (1840 - 1926) – artist (French)Details of artist on Google Art Project",
+      "title": "Wheatstacks, Snow Effect, Morning",
+      "license": "pd",
+      "credit": "wQFHCfdy-IlhFA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Claude_Monet_%28French_-_Sunrise_%28Marine%29_-_Google_Art_Project.jpg",
+      "width": 8029,
+      "height": 6529,
+      "artist": "Claude Monet",
+      "title": "Sunrise (Marine)",
+      "license": "pd",
+      "credit": "7AHeeG_wRdMdyA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "March or April 1873",
+        "number": 1873
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg",
+      "width": 6001,
+      "height": 7455,
+      "artist": "Claude Monet",
+      "title": "Woman with a Parasol - Madame Monet and Her Son",
+      "license": "pd",
+      "credit": "EwHxeymQQnprMg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1875",
+        "number": 1875
+      }
+    }
+  },
+  {
+    "status": "rejected",
+    "reason": {}
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Claude_Monet_-_Nymph%C3%A9as_%28Waterlilies%29_-_Google_Art_Project.jpg",
+      "width": 4824,
+      "height": 4291,
+      "artist": "Claude Monet",
+      "title": "Nymphéas [Waterlilies]",
+      "license": "pd",
+      "credit": "0gEk3X6Bn40QKg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "c.1914-17",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Claude_Monet_-_Port-Goulphar%2C_Belle-%C3%8Ele_-_Google_Art_Project.jpg",
+      "width": 4008,
+      "height": 5001,
+      "artist": "Claude Monet",
+      "title": "Port-Goulphar, Belle-Île",
+      "license": "pd",
+      "credit": "GAEJjgqfitikyw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1887",
+        "number": 1887
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Claude_Monet_-_V%C3%A9theuil_-_Google_Art_Project_%28427751%29.jpg",
+      "width": 5708,
+      "height": 4162,
+      "artist": "Claude Monet",
+      "title": "Vétheuil",
+      "license": "pd",
+      "credit": "6AHAWjoRiMwgWw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1879",
+        "number": 1879
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Claude_Monet_-_Poppy_Field_in_a_Hollow_near_Giverny_-_Google_Art_Project.jpg",
+      "width": 5701,
+      "height": 4551,
+      "artist": "Claude Monet",
+      "title": "Poppy Field in a Hollow near Giverny",
+      "license": "pd",
+      "credit": "PgFCiw9KjyPMkA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1885",
+        "number": 1885
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/12/Claude_Monet_-_Road_at_La_Cav%C3%A9e%2C_Pourville_-_Google_Art_Project.jpg",
+      "width": 5426,
+      "height": 4007,
+      "artist": "Claude Monet",
+      "title": "Road at La Cavée, Pourville",
+      "license": "pd",
+      "credit": "kAHKLO3n2oSnOQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1882",
+        "number": 1882
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Claude_Monet_-_Rue_de_la_Bavole%2C_Honfleur_-_Google_Art_Project.jpg",
+      "width": 4292,
+      "height": 3912,
+      "artist": "Claude Monet",
+      "title": "Rue de la Bavole, Honfleur",
+      "license": "pd",
+      "credit": "cQFZkMkyAPGgPQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "about 1864",
+        "number": 1864
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/51/Claude_Monet_-_Poppy_Field_-_Google_Art_Project_%28430231%29.jpg",
+      "width": 5209,
+      "height": 3809,
+      "artist": "Claude Monet",
+      "title": "Champ de coquelicots",
+      "license": "pd",
+      "credit": "hAFVe_EcSVyxCg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1881",
+        "number": 1881
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Claude_Monet_-_View_of_the_Prins_Hendrikkade_and_the_Kromme_Waal_in_Amsterdam_-_Google_Art_Project.jpg",
+      "width": 3360,
+      "height": 2481,
+      "artist": "Claude Monet",
+      "title": "View of the Prins Hendrikkade and the Kromme Waal in Amsterdam",
+      "license": "pd",
+      "credit": "dQEKSksU33z-uw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1874",
+        "number": 1874
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/Claude_Monet_-_Flower_Beds_at_V%C3%A9theuil_-_Google_Art_Project.jpg",
+      "width": 4517,
+      "height": 5701,
+      "artist": "Claude Monet",
+      "title": "Flower Beds at Vétheuil",
+      "license": "pd",
+      "credit": "owFTg9dyNCoq0w at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1881",
+        "number": 1881
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Claude_Monet_-_Rouen_Cathedral_Fa%C3%A7ade_and_Tour_d%27Albane_%28Morning_Effect%29_-_Google_Art_Project.jpg",
+      "width": 4123,
+      "height": 5995,
+      "artist": "Claude Monet",
+      "title": "Rouen Cathedral Façade and Tour d'Albane (Morning Effect)",
+      "license": "pd",
+      "credit": "pwHmZEyzDplQIw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1894",
+        "number": 1894
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/Claude_Monet_-_Valley_of_the_Creuse_%28Gray_Day%29_-_Google_Art_Project.jpg",
+      "width": 5257,
+      "height": 4224,
+      "artist": "Claude Monet",
+      "title": "Valley of the Creuse (Gray Day)",
+      "license": "pd",
+      "credit": "KgFz7l6kgN2vsg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1889",
+        "number": 1889
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/62/Claude_Monet_%28French%2C_Paris_1840%E2%80%931926_Giverny%29_-_Haystacks_%28Effect_of_Snow_and_Sun%29_-_Google_Art_Project.jpg",
+      "width": 3812,
+      "height": 2712,
+      "artist": "Claude Monet",
+      "title": "Haystacks (Effect of Snow and Sun)",
+      "license": "pd",
+      "credit": "xwEZ0PKa0C656g at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Claude_Monet_-_Rouen_Cathedral%2C_West_Fa%C3%A7ade%2C_Sunlight_-_Google_Art_Project.jpg",
+      "width": 5957,
+      "height": 9169,
+      "artist": "Claude Monet",
+      "title": "Rouen Cathedral, West Façade, Sunlight",
+      "license": "pd",
+      "credit": "wwEuC67zYZZZBA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1894",
+        "number": 1894
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/29/Claude_Monet_%28French_-_Still_Life_with_Flowers_and_Fruit_-_Google_Art_Project.jpg",
+      "width": 3331,
+      "height": 4139,
+      "artist": "Claude Monet",
+      "title": "Still Life with Flowers and Fruit",
+      "license": "pd",
+      "credit": "cAEQBxyETd21jQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1869",
+        "number": 1869
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/40/Claude_Monet_-_Rough_weather_at_%C3%89tretat_-_Google_Art_Project.jpg",
+      "width": 4537,
+      "height": 3677,
+      "artist": "Claude Monet",
+      "title": "Rough weather at Étretat",
+      "license": "pd",
+      "credit": "ygFw-IRhzTkvDQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "(1883)",
+        "number": 1883
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Claude_Monet_-_Pond_with_Water_Lilies_-_Google_Art_Project.jpg",
+      "width": 3568,
+      "height": 5001,
+      "artist": "Claude Monet",
+      "title": "Pond with Water Lilies",
+      "license": "pd",
+      "credit": "7wFvMeHQCRDVEw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1907",
+        "number": 1907
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Claude_Monet_-_The_Cliff_of_Aval%2C_Etr%C3%A9tat_-_Google_Art_Project.jpg",
+      "width": 4501,
+      "height": 3207,
+      "artist": "Claude Monet",
+      "title": "The Cliff of Aval, Etrétat",
+      "license": "pd",
+      "credit": "7AFALGbV2i_P5w at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1885",
+        "number": 1885
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Claude_Monet_-_The_Young_Ladies_of_Giverny%2C_Sun_Effect_-_Google_Art_Project.jpg",
+      "width": 5401,
+      "height": 3557,
+      "artist": "Claude Monet",
+      "title": "The Young Ladies of Giverny, Sun Effect",
+      "license": "pd",
+      "credit": "iwFUqd1GiiOlcQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1894",
+        "number": 1894
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/af/Claude_Monet_-_Water_Lilies_-_Google_Art_Project_%28462013%29.jpg",
+      "width": 3260,
+      "height": 3265,
+      "artist": "Claude Monet",
+      "title": "Water Lilies",
+      "license": "pd",
+      "credit": "AwFXeMnZK5jOBw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1916",
+        "number": 1916
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Claude_Monet_-_Waterlilies_-_Google_Art_Project.jpg",
+      "width": 4001,
+      "height": 3127,
+      "artist": "Claude Monet",
+      "title": "Waterlilies",
+      "license": "pd",
+      "credit": "EQEY9dAnBaXfnQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1906",
+        "number": 1906
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/Claude_Monet_-_Fishing_nets_at_Pourville_-_Google_Art_Project.jpg",
+      "width": 8056,
+      "height": 6023,
+      "artist": "Claude Monet",
+      "title": "Fishing nets at Pourville",
+      "license": "pd",
+      "credit": "2AHQceW3TukXLQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1882",
+        "number": 1882
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Claude_Monet_-_The_Doges_Palace_%28Le_Palais_ducal%29_-_Google_Art_Project.jpg",
+      "width": 5501,
+      "height": 4435,
+      "artist": "Claude Monet",
+      "title": "The Doges Palace (Le Palais ducal)",
+      "license": "pd",
+      "credit": "PwFJUJPRv2_hEg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1908",
+        "number": 1908
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Claude_Monet_-_Houses_of_Parliament%2C_Sunlight_Effect_%28Le_Parlement%2C_effet_de_soleil%29_-_Google_Art_Project.jpg",
+      "width": 5501,
+      "height": 4855,
+      "artist": "Claude Monet",
+      "title": "Houses of Parliament, Sunlight Effect (Le Parlement, effet de soleil)",
+      "license": "pd",
+      "credit": "ogHX89fG0cGJxQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1903",
+        "number": 1903
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Claude_Monet_-_In_the_Woods_at_Giverny-_Blanche_Hosched%C3%A9_at_Her_Easel_with_Suzanne_Hosched%C3%A9_Reading_-_Google_Art_Project.jpg",
+      "width": 2401,
+      "height": 2247,
+      "artist": "Claude Monet",
+      "title": "In the Woods at Giverny: Blanche Hoschedé at Her Easel with Suzanne Hoschedé Reading",
+      "license": "pd",
+      "credit": "5wF3eJ0lvxhbeg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1887",
+        "number": 1887
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Claude_Monet_-_View_of_V%C3%A9theuil_-_Google_Art_Project.jpg",
+      "width": 2612,
+      "height": 3272,
+      "artist": "Claude Monet",
+      "title": "View of Vétheuil",
+      "license": "pd",
+      "credit": "sgGLkP6ZwIFDBg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1880",
+        "number": 1880
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/01/Claude_Monet_-_The_Beach_at_Sainte-Adresse_-_Google_Art_Project.jpg",
+      "width": 3001,
+      "height": 2193,
+      "artist": "Claude Monet",
+      "title": "Der Strand von Sainte-Adresse",
+      "license": "pd",
+      "credit": "pwETHWF8RYVcXg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1867",
+        "number": 1867
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Claude_Monet_-_Arrival_of_the_Normandy_Train%2C_Gare_Saint-Lazare_-_Google_Art_Project.jpg",
+      "width": 5890,
+      "height": 4418,
+      "artist": "Claude Monet",
+      "title": "Arrival of the Normandy Train, Gare Saint-Lazare",
+      "license": "pd",
+      "credit": "_gHKDt1FQ51WQA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1877",
+        "number": 1877
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/Claude_Monet_-_V%C3%A9theuil_-_Google_Art_Project.jpg",
+      "width": 3231,
+      "height": 3136,
+      "artist": "Claude Monet",
+      "title": "ヴェトゥイユ",
+      "license": "pd",
+      "credit": "XwFraAvBJSAt5g at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1902",
+        "number": 1902
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Claude_Monet_-_Waterloo_Bridge_in_London_-_Google_Art_Project.jpg",
+      "width": 3879,
+      "height": 2523,
+      "artist": "Claude Monet",
+      "title": "ウォータールー橋、ロンドン",
+      "license": "pd",
+      "credit": "owF6Xdg0d9ObLg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1902",
+        "number": 1902
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/15/Claude_Monet_-_Morning_on_the_Seine_-_Google_Art_Project.jpg",
+      "width": 4140,
+      "height": 3307,
+      "artist": "Claude Monet",
+      "title": "セーヌ河の朝",
+      "license": "pd",
+      "credit": "bQEXOM0GSEYXsA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1898",
+        "number": 1898
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Claude_Monet_-_Peony_Garden_-_Google_Art_Project.jpg",
+      "width": 3925,
+      "height": 2545,
+      "artist": "Claude Monet",
+      "title": "しゃくやくの花園",
+      "license": "pd",
+      "credit": "agEgvAkxkNhd0A at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1887",
+        "number": 1887
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Claude_Monet_-_Road_of_La_Roche-Guyon_-_Google_Art_Project.jpg",
+      "width": 3921,
+      "height": 3298,
+      "artist": "Claude Monet",
+      "title": "ラ・ロシュ=ギュイヨンの道",
+      "license": "pd",
+      "credit": "3wF6-c30wxbO3A at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1880",
+        "number": 1880
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Claude_Monet_-_On_the_Boat_-_Google_Art_Project.jpg",
+      "width": 3049,
+      "height": 3350,
+      "artist": "Claude Monet",
+      "title": "舟遊び",
+      "license": "pd",
+      "credit": "UQFKgSkcsCnEuQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1887",
+        "number": 1887
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/df/Claude_Monet_-_Walk_%28Road_of_the_Farm_Saint-Sim%C3%A9on%29_-_Google_Art_Project.jpg",
+      "width": 2327,
+      "height": 4145,
+      "artist": "Claude Monet",
+      "title": "並木道（サン＝シメオン農場の道）",
+      "license": "pd",
+      "credit": "rwGX7alCWNyquQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1864",
+        "number": 1864
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/Claude_Monet_-_Yellow_Irises_-_Google_Art_Project.jpg",
+      "width": 2172,
+      "height": 4345,
+      "artist": "Claude Monet",
+      "title": "黄色いアイリス",
+      "license": "pd",
+      "credit": "PAEAD4oS9PBeaw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "(c. 1914 - c. 1917)",
+        "number": 1914
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/96/Claude_Monet_-_Poplars_in_the_Sun_-_Google_Art_Project.jpg",
+      "width": 2825,
+      "height": 3600,
+      "artist": "Claude Monet",
+      "title": "陽を浴びるポプラ並木",
+      "license": "pd",
+      "credit": "sAGwBxcpaC6aUw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Claude_Monet_-_Charing-Cross_Bridge_in_London_-_Google_Art_Project.jpg",
+      "width": 3766,
+      "height": 2447,
+      "artist": "Claude Monet",
+      "title": "チャーリング・クロス橋、ロンドン",
+      "license": "pd",
+      "credit": "aQGGEQOSUt3oEQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1902",
+        "number": 1902
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/46/Claude_Monet_-_Heavy_Sea_at_Pourville_-_Google_Art_Project.jpg",
+      "width": 3836,
+      "height": 2797,
+      "artist": "Claude Monet",
+      "title": "波立つプールヴィルの海",
+      "license": "pd",
+      "credit": "0AEjD05tl9PSMA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1897",
+        "number": 1897
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Claude_Monet_-_Le_Bassin_des_Nympheas_-_Google_Art_Project.jpg",
+      "width": 5601,
+      "height": 5332,
+      "artist": "Claude Monet",
+      "title": "Le Bassin des Nympheas",
+      "license": "pd",
+      "credit": "cAHJas1Xh4UVxw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1904",
+        "number": 1904
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/9/98/Claude_Monet_-_Waterloo_Bridge_-_Google_Art_Project.jpg",
+      "width": 5244,
+      "height": 3415,
+      "artist": "Claude Monet",
+      "title": "Waterloo Bridge",
+      "license": "pd",
+      "credit": "pAGQ8rtR9PbpJw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1903",
+        "number": 1903
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/Monet%2C_Claude_-_Water_Lilies_%28Nymph%C3%A9as%29_-_Google_Art_Project.jpg",
+      "width": 6260,
+      "height": 7147,
+      "artist": "Claude Monet",
+      "title": "Water Lilies (Nymphéas)",
+      "license": "pd",
+      "credit": "YQHBefRbORVLuA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1907",
+        "number": 1907
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Claude_Monet_-_A_Corner_of_the_Apartment_-_Google_Art_Project.jpg",
+      "width": 4914,
+      "height": 6585,
+      "artist": "Claude Monet",
+      "title": "Un coin d'appartement",
+      "license": "pd",
+      "credit": "egHkzyr10JGq8g at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1875",
+        "number": 1875
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/61/Claude_Monet_-_Regattas_at_Argenteuil_-_Google_Art_Project.jpg",
+      "width": 5978,
+      "height": 3852,
+      "artist": "Claude Monet",
+      "title": "Régates à Argenteuil",
+      "license": "pd",
+      "credit": "6gGcxRaMfrnJ9Q at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1872",
+        "number": 1872
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/44/Claude_Monet_-_The_Railroad_bridge_in_Argenteuil_-_Google_Art_Project.jpg",
+      "width": 5348,
+      "height": 4024,
+      "artist": "Claude Monet",
+      "title": "Le pont du chemin de fer à Argenteuil",
+      "license": "pd",
+      "credit": "zgHvk19v1IHjjA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "(1873 - 1874)",
+        "number": 1873
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Claude_Monet_-_Villas_at_Bordighera_-_Google_Art_Project.jpg",
+      "width": 4330,
+      "height": 3688,
+      "artist": "Claude Monet",
+      "title": "Les Villas à Bordighera",
+      "license": "pd",
+      "credit": "pQF_4jmpmbxRqw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1884",
+        "number": 1884
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/Claude_Monet_-_H%C3%B4tel_des_roches_noires._Trouville_-_Google_Art_Project.jpg",
+      "width": 3133,
+      "height": 4533,
+      "artist": "Claude Monet",
+      "title": "Hôtel des roches noires. Trouville",
+      "license": "pd",
+      "credit": "lAEswCWla3bwcw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1870",
+        "number": 1870
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Claude_Monet_-_Wind_Effect%2C_Series_of_The_Poplars_-_Google_Art_Project.jpg",
+      "width": 5643,
+      "height": 7808,
+      "artist": "Claude Monet",
+      "title": "Effet de vent, série des Peupliers",
+      "license": "pd",
+      "credit": "tgHEOLlXi2OOlg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Claude_Monet_-_Haystacks%2C_end_of_Summer_-_Google_Art_Project.jpg",
+      "width": 7424,
+      "height": 4365,
+      "artist": "Claude Monet",
+      "title": "Haystacks, end of Summer",
+      "license": "pd",
+      "credit": "uAGiTS7UJkQXUw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Claude_Monet_-_Train_in_the_Countryside_-_Google_Art_Project.jpg",
+      "width": 5209,
+      "height": 3880,
+      "artist": "Claude Monet",
+      "title": "Train dans la campagne",
+      "license": "pd",
+      "credit": "RwEH_w3Wno6bCQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1870",
+        "number": 1870
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/14/Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg",
+      "width": 5610,
+      "height": 5269,
+      "artist": "Claude Monet",
+      "title": "Water Lilies",
+      "license": "pd",
+      "credit": "JwFZ8s09sSc0Gg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1922",
+        "number": 1922
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/db/Claude_Monet_-_Flowering_Plum_Trees_-_Google_Art_Project.jpg",
+      "width": 5269,
+      "height": 4189,
+      "artist": "Claude Monet",
+      "title": "Flowering Plum Trees",
+      "license": "pd",
+      "credit": "BgHyFXk6wbjLsQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1879",
+        "number": 1879
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Claude_Monet_-_Three_Fishing_Boats_-_Google_Art_Project.jpg",
+      "width": 5408,
+      "height": 4291,
+      "artist": "Claude Monet",
+      "title": "Three Fishing Boats",
+      "license": "pd",
+      "credit": "AwFK3bYzu9yMHw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1886",
+        "number": 1886
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/61/Claude_Monet_-_Ice_breaking_up_on_the_Seine_near_Bennecourt_-_Google_Art_Project.jpg",
+      "width": 3125,
+      "height": 2036,
+      "artist": "Claude Monet",
+      "title": "Ice breaking up on the Seine near Bennecourt",
+      "license": "pd",
+      "credit": "NwEGALYxxMINSA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1893",
+        "number": 1893
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/44/Claude_Monet_-_Haystacks-_Snow_Effect_-_Google_Art_Project.jpg",
+      "width": 4001,
+      "height": 2826,
+      "artist": "Claude Monet",
+      "title": "Haystacks: Snow Effect",
+      "license": "pd",
+      "credit": "TgH5tEmR0EYNag at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Claude_Monet_-_Poplars_on_the_Epte_-_Google_Art_Project.jpg",
+      "width": 4001,
+      "height": 4001,
+      "artist": "Claude Monet",
+      "title": "Poplars on the Epte",
+      "license": "pd",
+      "credit": "tAF_YbFvVelS9Q at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Claude_Monet_-_A_Seascape%2C_Shipping_by_Moonlight_-_Google_Art_Project.jpg",
+      "width": 4001,
+      "height": 3264,
+      "artist": "Claude Monet",
+      "title": "A Seascape, Shipping by Moonlight",
+      "license": "pd",
+      "credit": "IAGkIdZveew5CQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1864",
+        "number": 1864
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Claude_Monet%2C_French_-_Port_of_Le_Havre_-_Google_Art_Project.jpg",
+      "width": 5473,
+      "height": 3217,
+      "artist": "Claude Monet",
+      "title": "Port of Le Havre",
+      "license": "pd",
+      "credit": "dAEAn-KV4FbF9g at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1874",
+        "number": 1874
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Claude_Monet%2C_French_-_The_Japanese_Footbridge_and_the_Water_Lily_Pool%2C_Giverny_-_Google_Art_Project.jpg",
+      "width": 4336,
+      "height": 4127,
+      "artist": "Claude Monet",
+      "title": "The Japanese Footbridge and the Water Lily Pool, Giverny",
+      "license": "pd",
+      "credit": "OgHdz4nsHHvhcQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1899",
+        "number": 1899
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Claude_Monet%2C_French_-_Poplars_-_Google_Art_Project.jpg",
+      "width": 4248,
+      "height": 5353,
+      "artist": "Claude Monet",
+      "title": "Poplars",
+      "license": "pd",
+      "credit": "PQEmDQRzI4isTg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1891",
+        "number": 1891
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Claude_Monet_-_Bassin_d%27Argenteuil_-_Google_Art_Project.jpg",
+      "width": 5377,
+      "height": 3953,
+      "artist": "Claude Monet",
+      "title": "Le Bassin d’Argenteuil",
+      "license": "pd",
+      "credit": "0QFVeV3Ta-Yrnw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1872",
+        "number": 1872
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Claude_Monet_-_The_Cathedral_in_Rouen._The_portal%2C_Grey_Weather_-_Google_Art_Project.jpg",
+      "width": 5030,
+      "height": 7921,
+      "artist": "Claude Monet",
+      "title": "La cathédrale de Rouen. Le portail,temps gris",
+      "license": "pd",
+      "credit": "JQF3hNC2GLQLKQ at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1892",
+        "number": 1892
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Claude_Monet_-_The_Coalmen_-_Google_Art_Project.jpg",
+      "width": 4912,
+      "height": 4042,
+      "artist": "Claude Monet",
+      "title": "The Coalmen",
+      "license": "pd",
+      "credit": "zAEIrBo2EtmUKg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1875",
+        "number": 1875
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Claude_Monet_-_The_Argenteuil_Bridge_-_Google_Art_Project.jpg",
+      "width": 5307,
+      "height": 3978,
+      "artist": "Claude Monet",
+      "title": "Le Pont d'Argenteuil",
+      "license": "pd",
+      "credit": "zAGt_suewfK9Qw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1874",
+        "number": 1874
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/7/78/Claude_Monet_-_The_Magpie_-_Google_Art_Project.jpg",
+      "width": 4289,
+      "height": 2909,
+      "artist": "Claude Monet",
+      "title": "La Pie",
+      "license": "pd",
+      "credit": "rQGnadHwK8lSmg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "(1868 - 1869)",
+        "number": 1868
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/6/61/Claude_Monet_-_The_Saint-Lazare_Station_-_Google_Art_Project.jpg",
+      "width": 3708,
+      "height": 2757,
+      "artist": "Claude Monet",
+      "title": "La gare Saint-Lazare",
+      "license": "pd",
+      "credit": "wAHOCsl09dhUPw at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1877",
+        "number": 1877
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Claude_Monet_-_The_Rue_Montorgueil_in_Paris._Celebration_of_June_30%2C_1878_-_Google_Art_Project.jpg",
+      "width": 5259,
+      "height": 8753,
+      "artist": "Claude Monet",
+      "title": "French:  La rue Montorgueil à Paris. Fête du 30 juin 1878The Rue Montorgueil in Paris. Celebration of June 30, 1878",
+      "license": "pd",
+      "credit": "hQGKcVaLpt9iCg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1878",
+        "number": 1878
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Claude_Monet_-_Blue_Water_Lilies_-_Google_Art_Project.jpg",
+      "width": 5649,
+      "height": 5621,
+      "artist": "Claude Monet",
+      "title": "Nymphéas bleus",
+      "license": "pd",
+      "credit": "1QFF7Ef6R2oyog at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "(1916 - 1919)",
+        "number": 1916
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/89/Claude_Monet_-_Poppy_Field_-_Google_Art_Project.jpg",
+      "width": 5586,
+      "height": 4258,
+      "artist": "Claude Monet",
+      "title": "Coquelicots",
+      "license": "pd",
+      "credit": "xQGTinA-MPxcVg at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "1873",
+        "number": 1873
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Claude_Monet_-_Jar_of_Peaches_-_Google_Art_Project.jpg",
+      "width": 3178,
+      "height": 3891,
+      "artist": "Claude Monet",
+      "title": "Jar of Peaches",
+      "license": "pd",
+      "credit": "ZgGD8zECuRSTdA at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "circa 1866",
+        "number": 1866
+      }
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/af/Claude_Monet_-_The_Water_Lily_Pond%2C_c._1917-19_-_Google_Art_Project.jpg",
+      "width": 6854,
+      "height": 3513,
+      "artist": "Claude Monet",
+      "title": "The Water Lily Pond, c. 1917-19",
+      "license": "pd",
+      "credit": "8wEdI9HpdIuC7g at Google Cultural Institute maximum zoom level",
+      "year": {
+        "text": "c. 1917-19",
+        "number": 1917
+      }
+    }
+  },
+  {
+    "status": "rejected",
+    "reason": {}
+  },
+  {
+    "status": "rejected",
+    "reason": {}
+  },
+  {
+    "status": "rejected",
+    "reason": {}
+  }
+]

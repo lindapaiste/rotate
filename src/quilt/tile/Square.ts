@@ -2,6 +2,8 @@ import {I_Sides, I_SquareProps, PointTuple, SideName} from "./types";
 
 /**
  * turns props x, y and size into coordinates for the four side triangles
+ *
+ * would use this with Canvas, but don't need it with SVG
  */
 export class Square implements Required<I_SquareProps> {
     public readonly colors: I_Sides<string>;

@@ -11,13 +11,17 @@ export const screen = (state: ScreenState, action: ActionType<any>, wholeState: 
     /**
      * helper function for creating a transition state
      */
-    const transitionTo = (page: Page, isGoingBack: boolean = false, previous = state.current): ScreenState => ({
-        previous,
-        current: page,
-        isTransitioning: true,
-        isGoingBack,
-        modal: null, //close modals on transition
-    });
+    const transitionTo = (page: Page, isGoingBack: boolean = false, previous = state.current): ScreenState => {
+        console.log("transitioning to");
+        console.log( page );
+        return ({
+            previous,
+            current: page,
+            isTransitioning: true,
+            isGoingBack,
+            modal: null, //close modals on transition
+        });
+    }
     /**
      * switch between navigation actions
      */

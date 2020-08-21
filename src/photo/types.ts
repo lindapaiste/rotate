@@ -31,3 +31,12 @@ export interface DrawImageProps {
     sourceArea: I_Rectangle;
     destinationArea: I_Rectangle;
 }
+
+/**
+ * expect the file to already be cropped to the desired area
+ *
+ * should I store things like artist and year then map to title and subtitle?  or pass through raw?
+ */
+export interface ImageLevelProps {
+
+}

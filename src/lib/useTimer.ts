@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {round} from "../lib";
 
-export interface I_Timer {
+export interface Timer {
     start(): void; //starts from 0;
     pause(): void;
     resume(): void;
@@ -13,7 +13,7 @@ export interface I_Timer {
     getS( round?: number ): number;
 }
 
-export const useTimer = (): I_Timer => {
+export const useTimer = (): Timer => {
     /**
      * store the amount of time that has passed before being stopped by a pause or stop action
      */

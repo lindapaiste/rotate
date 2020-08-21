@@ -1,33 +1,7 @@
 import {PackStatic} from "../universalGame/state/types-state";
-import {makeArray, random} from "../lib";
-import {InitialTile} from "../state/generic/types";
-import {SideColors} from "../quilt/square/types";
-import {generateTiles} from "../quilt/grid/generateGrid";
-
-export interface QuiltLevelProps {
-    width: number;
-    height: number;
-    tiles: InitialTile<SideColors>[];
-}
-
-interface MakeLevelProps {
-    width: number;
-    height: number;
-    colorCount: {
-        min: number;
-        max: number;
-    }
-}
-
-const makeLevel = ({width, height, colorCount}: MakeLevelProps): QuiltLevelProps => ({
-    width,
-    height,
-    tiles: generateTiles({
-        width,
-        height,
-        colorCount: random(colorCount.min, colorCount.max)
-    })
-})
+import {makeArray} from "../lib";
+import {makeLevel} from "../quilt/generate/makeLevel";
+import {QuiltLevelProps} from "../quilt/generate/types";
 
 const packs: PackStatic<QuiltLevelProps>[] = [
     {
@@ -51,11 +25,11 @@ const packs: PackStatic<QuiltLevelProps>[] = [
             width: 6,
             height: 8,
         })),
-        getLevel: () => makeLevel({
+        /*getLevel: () => makeLevel({
             colorCount: {min: 3, max: 6},
             width: 6,
             height: 8,
-        })
+        })*/
     },
     {
         title: "Hard",

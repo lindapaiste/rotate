@@ -35,6 +35,7 @@ export const LevelsGrid = <T extends any>({levels, size, RenderThumb, onPressLev
                         levelId={levelId}
                         size={size}
                         aspectRatio={aspectRatio}
+                        //onPress={() => console.log("pressed" + levelId)}
                         onPress={() => onPressLevel(levelId)}
                     />
                 </View>

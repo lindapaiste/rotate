@@ -1,6 +1,6 @@
-import {LevelIdentifier, PackState, PackStatic, StoredVictory, Victory} from "./types-state";
+import {DefinedPack, LevelIdentifier, PackState, PackStatic, StoredVictory, Victory} from "./types-state";
 import {emptyPackState} from "./empty-state";
-import {I_PackProps} from "../components/types-components";
+import {PackProps} from "../components/types-components";
 import {ifDefined} from "../../lib";
 import {Page, PageType} from "./pages";
 
@@ -68,7 +68,7 @@ export const packLevelCount = (packStatic: PackStatic<any>): number | null => {
 /**
  * maps static properties of the pack and current pack state into standardized pack props interface
  */
-export const packToProps = <P extends PackStatic<any>>(packStatic: P, packState: PackState): I_PackProps<P> => {
+export const packToProps = <P extends PackStatic<any>>(packStatic: P, packState: PackState): PackProps<P> => {
     return {
         ...packStatic,
         ...packState,
@@ -83,8 +83,8 @@ export const hasNextLevel = (pack: PackStatic<any>, levelId: number): boolean =>
     return pack.infinite ? true : pack.levels.length > levelId + 1;
 }
 
-export const levelProps = <L>(pack: PackStatic<L>, levelId: number): L => {
-    return pack.infinite ? pack.getLevel(levelId) : pack.levels[levelId];
+export const levelProps = <L>(pack: DefinedPack<L>, levelId: number): L => {
+    return pack.levels[levelId];
 }
 
 export const minimumMoves = <L>(props: L & { minimumMoves?: number }): number | null => { // L extends {minimumMoves: number} ? number : null

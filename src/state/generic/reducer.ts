@@ -1,12 +1,17 @@
-import {I_State} from "./types";
+import {LevelState} from "./types";
 import {ActionTypes} from "./actions";
 import * as A from "./actionNames";
 import {replaceIndex, last} from "../../lib";
 
-export const reducer = <T>(state: I_State<T>, action: ActionTypes<T>): I_State<T> => {
+export const reducer = <T>(state: LevelState<T>, action: ActionTypes<T>): LevelState<T> => {
     switch (action.type) {
         case A.ROTATE:
             const {id} = action.payload;
+            // don't rotate frozen tiles
+            if ( state.frozen.includes(id) ) {
+                return state;
+            }
+            console.log("rotating tile # " + id);
             return {
                 ...state,
                 rotations: replaceIndex(state.rotations, id, state.rotations[id] + 1),
@@ -56,6 +61,19 @@ export const reducer = <T>(state: I_State<T>, action: ActionTypes<T>): I_State<T
             return {
                 ...state,
                 startTime: action.payload.time,
+            }
+        case A.APPLY_HINT:
+            //need to make sure that applying a hint doesn't cause any issues with history.  undo shouldn't rotate it.  if restarting, keep the hint
+            //can achieve this by removing all instances of this tile id from history array
+            const hintId = action.payload.id;
+            return {
+                ...state,
+                frozen: [...state.frozen, hintId],
+                history: state.history.filter( id => id !== hintId ),
+                //moveCount penalty +5
+                moveCount: state.moveCount + 5,
+                //rotate clockwise to next increment
+                rotations: replaceIndex(state.rotations, hintId, state.rotations[hintId] + action.payload.rotations ),
             }
         default:
             return state;

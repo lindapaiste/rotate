@@ -13,7 +13,7 @@ import {
 import {emptyPackState} from "./empty-state";
 import {getParentPage, levelBest, minimumMoves, packLastPlayed, packToProps} from "./helpers";
 import {ifNotNull} from "../../lib";
-import {I_PackProps} from "../components/types-components";
+import {PackProps} from "../components/types-components";
 import {Page, PageType} from "./pages";
 
 /**
@@ -25,6 +25,10 @@ const getPackState = (packId: number) => (state: State<any, any>): PackState => 
 
 export const getIsUnlocked = (packId: number) => (state: State<any, any>): boolean => {
     return getPackState(packId)(state).unlocked;
+}
+
+export const getIsInfinite = (packId: number) => (state: State<any, any>): boolean => {
+    return state.packs[packId].infinite;
 }
 
 /**
@@ -106,7 +110,7 @@ export const getPackStatic = (packId: number) => <S extends State<any, any>>(sta
 }
 
 
-export const getPackProps = (packId: number) => <S extends State<any, any>>(state: S): I_PackProps<StatePack<S>> => {
+export const getPackProps = (packId: number) => <S extends State<any, any>>(state: S): PackProps<StatePack<S>> => {
     return packToProps(
         state.packs[packId],
         getPackState(packId)(state),
@@ -125,14 +129,29 @@ export const getHasNextLevel = (level: LevelIdentifier) => (state: State<any, an
     return pack.infinite ? true : pack.levels.length > level.levelId + 1;
 }
 
+/**
+ * can only get props if pack is not infinite,
+ * otherwise throw an error
+ */
 export const getLevelProps = (level: LevelIdentifier) => <S extends State<any, any>>(state: S): StateLevel<S> => {
     const pack: PackStatic<StateLevel<S>> = state.packs[level.packId];
-    return pack.infinite ? pack.getLevel(level.levelId) : pack.levels[level.levelId];
+    if ( pack.infinite ) {
+        throw new Error("cannot get props for an infinite pack level");
+    }
+    return pack.levels[level.levelId];
 }
 
+/**
+ * need to re-evaluate how to handle this for infinite
+ * temporary hack is to just return null
+ */
 export const getMinimumMoves = (level: LevelIdentifier) => <L>(state: State<any, PackStatic<L>>): number | null => {
-    const props = getLevelProps(level)(state);
-    return minimumMoves(props);
+    try {
+        const props = getLevelProps(level)(state);
+        return minimumMoves(props);
+    } catch (e) {
+        return null;
+    }
 }
 
 export const hasBack = (state: State<any, any>): boolean => {
@@ -149,10 +168,16 @@ export const getTitles = (page: Page) => <L extends Partial<Titles>>(state: Stat
             };
         case PageType.WIN_LEVEL:
         case PageType.PLAY_LEVEL:
-            const level = getLevelProps(page)(state);
-            return {
-                title: level.title || `Level ${page.levelId + 1}`,
-                subtitle: level.subtitle,
+            try {
+                const level = getLevelProps(page)(state);
+                return {
+                    title: level.title || `Level ${page.levelId + 1}`,
+                    subtitle: level.subtitle,
+                }
+            } catch (e) { //hacky fix for infinite
+                return {
+                    title: `Level ${page.levelId + 1}`,
+                }
             }
         case PageType.SELECT_PACK:
             return {

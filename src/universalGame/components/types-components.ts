@@ -35,7 +35,7 @@ export interface ModalProps {
 /**
  * anything receiving packs gets this or some subset of it
  */
-export type I_PackProps<P> = Omit<P & PackStatic<any>, 'levels'> & {
+export type PackProps<P> = Omit<P & PackStatic<any>, 'levels'> & {
     unlocked: boolean;
     victoryCount: number;
     levelCount: number | null; //null if infinite
@@ -53,8 +53,8 @@ export type I_PackProps<P> = Omit<P & PackStatic<any>, 'levels'> & {
  * include static info of the pack along with variable progress props unlocked and victoryCount
  * could sort by recency with a lastPlayed prop
  */
-export interface I_SelectPackProps<P> {
-    packs: I_PackProps<P>[];
+export interface SelectPackProps<P> {
+    packs: PackProps<P>[];
 
     onPressPack(packId: number): void;
 }
@@ -63,7 +63,7 @@ export interface I_SelectPackProps<P> {
  * needs an array of level data
  * might want some info about the pack, like name etc.
  */
-export type I_RenderPackProps<P> = I_PackProps<P> & {
+export type RenderPackProps<P> = PackProps<P> & {
     packId: number;
     unlocked: boolean;
     victoryCount: number;
@@ -76,7 +76,7 @@ export type I_RenderPackProps<P> = I_PackProps<P> & {
  * minimum props for rendering a thumbnail on the render pack page
  * a custom render pack can add extra props
  */
-export type I_LevelThumbProps<L> = L & {
+export type LevelThumbProps<L> = L & {
     levelId: number;
     best?: Victory | null | undefined;
     onPress(): void;
@@ -87,7 +87,7 @@ export type I_LevelThumbProps<L> = L & {
  * needs a callback to execute when the level has been won
  * generic L provides all of the specific props
  */
-export type I_PlayLevelProps<L> = L & {
+export type PlayLevelProps<L> = L & {
     previousBest: null | Victory;
     packId: number;
     levelId: number;
@@ -100,7 +100,7 @@ export type I_PlayLevelProps<L> = L & {
  * in order to render continue button, need to know if there is a next level
  * and what to do when the continue button is clicked
  */
-export interface I_WinScreenProps {
+export interface WinScreenProps {
     current: Victory,
     previousBest: null | Victory;
     booleans: VictoryBooleans;
@@ -120,21 +120,21 @@ export interface VictoryBooleans {
     isBestStars: boolean;
 }
 
-export type I_UnlockPackProps<P> = I_PackProps<P> & {
+export type UnlockPackProps<P> = PackProps<P> & {
     packId: number;
     onUnlock(): void;
     onUnlockAll(): void;
     onVisitStore(): void;
 }
 
-export interface I_StoreProps<P> {
-    packs: I_PackProps<P>[];
+export interface StoreProps<P> {
+    packs: PackProps<P>[];
 
     onUnlockPack( packId: number ): void;
     onUnlockAll(): void;
 }
 
-export interface I_TopMenuProps {
+export interface TopMenuProps {
     hasBack: boolean;
     //allow these to be generators in the case that they are overwritten
     title?: MaybeGenerate<ReactNode, Page>;
@@ -144,13 +144,13 @@ export interface I_TopMenuProps {
     onPressSettings?(): void;
 }
 
-export interface I_BackBarProps {
+export interface BackBarProps {
     //hasBack: boolean; not rendering at all if there is no page, so don't need this
     backPage?: Page;
     onPressBack(): void;
 }
 
-export interface I_EditSettingsProps<S> {
+export interface EditSettingsProps<S> {
     settings: S;
     onUpdateSettings(changes: Partial<S>): void;
 }
@@ -163,21 +163,23 @@ export interface PageComponents<S extends {}, P extends PackStatic<any>> {
     /**
      * screens
      */
-    RenderSelectPack: ComponentType<TransitionProps & I_SelectPackProps<P>>;
-    RenderSelectLevel: ComponentType<TransitionProps & I_RenderPackProps<P>>;
+    RenderAppLoading: ComponentType;
+    RenderSelectPack: ComponentType<TransitionProps & SelectPackProps<P>>;
+    RenderSelectLevel: ComponentType<TransitionProps & RenderPackProps<P>>;
     //assume that PlayLevel includes the menu??
-    RenderPlayLevel: ComponentType<TransitionProps & I_PlayLevelProps<LevelType<P>>>;
-    RenderWinLevel: ComponentType<TransitionProps & I_WinScreenProps>;
+    RenderPlayLevel: ComponentType<TransitionProps & PlayLevelProps<LevelType<P>>>;
+    RenderPlayInfiniteLevel: ComponentType<TransitionProps & PlayLevelProps<{}>>
+    RenderWinLevel: ComponentType<TransitionProps & WinScreenProps>;
     /**
      * modals
      */
-    RenderUnlockPackModal: ComponentType<ModalProps & I_UnlockPackProps<P>>;
-    RenderStoreModal: ComponentType<ModalProps & I_StoreProps<P>>;
-    RenderSettingsModal: ComponentType<ModalProps & I_EditSettingsProps<S>>;
+    RenderUnlockPackModal: ComponentType<ModalProps & UnlockPackProps<P>>;
+    RenderStoreModal: ComponentType<ModalProps & StoreProps<P>>;
+    RenderSettingsModal: ComponentType<ModalProps & EditSettingsProps<S>>;
     /**
      * pieces
      */
-    RenderTopMenu: ComponentType<I_TopMenuProps>;
+    RenderTopMenu: ComponentType<TopMenuProps>;
 }
 
 

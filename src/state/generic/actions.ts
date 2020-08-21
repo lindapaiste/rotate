@@ -1,26 +1,29 @@
 import * as A from "./actionNames";
-import {I_State, InitialTile, LevelLayout} from "./types";
+import {Hint, LevelState, InitialTile, LevelLayout} from "./types";
 import {newLevelState} from "./emptyState";
 
 export type ActionTypes<T> = {
-    type: typeof A.ROTATE,
-    payload: {id: number},
+    type: typeof A.ROTATE;
+    payload: {id: number};
 } | {
-    type: typeof A.LOAD_LEVEL,
-    payload: I_State<T>,
+    type: typeof A.LOAD_LEVEL;
+    payload: LevelState<T>;
 } | {
-    type: typeof A.RESIZE,
-    payload: {tileSize: number},
+    type: typeof A.RESIZE;
+    payload: {tileSize: number};
 } | {
-    type: typeof A.START_TIME,
-    payload: {time: number},
+    type: typeof A.START_TIME;
+    payload: {time: number};
 } | {
-    type: typeof A.RESTART,
-    payload: {time: number},
+    type: typeof A.RESTART;
+    payload: {time: number};
 } | {
-    type: typeof A.UNDO,
+    type: typeof A.UNDO;
 } | {
-    type: typeof A.COMPLETE_LEVEL,
+    type: typeof A.COMPLETE_LEVEL;
+} | {
+    type: typeof A.APPLY_HINT;
+    payload: Hint;
 }
 
 export const rotate = (id: number): ActionTypes<any> => ({
@@ -55,6 +58,11 @@ export const startTimer = (): ActionTypes<any> => ({
 
 export const undo = (): ActionTypes<any> => ({
     type: A.UNDO,
+})
+
+export const hint = ({id, rotations}: Hint): ActionTypes<any> => ({
+    type: A.APPLY_HINT,
+    payload: {id, rotations},
 })
 
 export const restart = (): ActionTypes<any> => ({

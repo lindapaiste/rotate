@@ -2,7 +2,7 @@ import {PackStatic, State, Victory} from "../../state/types-state";
 import {Page, PageType} from "../../state/pages";
 import {
     getAllPackProps,
-    getHasNextLevel,
+    getHasNextLevel, getIsInfinite,
     getIsUnlocked,
     getLevelBest,
     getLevelProps,
@@ -26,23 +26,18 @@ export interface Props<S, P extends PackStatic<any>> {
 }
 
 /**
- * assigns the various page type to their render components and gives them all of the necessary props
+ * assigns the various page types to their render components and gives them all of the necessary props
  *
  * renders a single screen, which can be loading in, loading out, or active
- *
- * can deal with modals in a cleaner way by saving open modal to state,
- * but would want to save props and type rather than a JSX element
  */
 export const RenderPage = <S extends {}, P extends PackStatic<any>>({page, transition, state, actions, Components}: Props<S, P>) => {
     switch (page.type) {
 
         case PageType.SELECT_LEVEL:
-            const pack = getPackProps(page.packId)(state);
-
             return (
                 <Components.RenderSelectLevel
                     {...transition}
-                    {...pack}
+                    {...getPackProps(page.packId)(state)}
                     levels={getPackBests(page.packId)(state)}
                     onPressLevel={
                         (levelId: number) => actions.playLevel({
@@ -55,6 +50,8 @@ export const RenderPage = <S extends {}, P extends PackStatic<any>>({page, trans
 
         case PageType.WIN_LEVEL:
             const {best, victory} = page.extra;
+            // TODO: how to deal with minimum moves for infinite packs? will be based on a function rather than a value
+            // stored in the pack props object could pass in with the victory
             const minimumMoves = getMinimumMoves(page)(state);
             return (
                 <Components.RenderWinLevel
@@ -79,19 +76,36 @@ export const RenderPage = <S extends {}, P extends PackStatic<any>>({page, trans
             );
 
         case PageType.PLAY_LEVEL:
-            return (
+            /**
+             * need to separate between infinite and regular packs
+             * or perhaps handle this lower, where the Game instance just gets the ids and has to get pack props itself
+             */
+            const pack = state.packs[page.packId];
+
+            const sharedProps = {
+                ...transition,
+                levelId: page.levelId,
+                packId: page.packId,
+                onWin: (victory: Victory) => actions.completeLevel({
+                    ...victory,
+                    ...page,
+                })
+            };
+
+            if (pack.infinite) {
+                return (
+                    <Components.RenderPlayInfiniteLevel
+                        {...sharedProps}
+                        previousBest={null}
+                    />
+                )
+            }
+
+            else return (
                 <Components.RenderPlayLevel
-                    {...transition}
+                    {...sharedProps}
                     {...getLevelProps(page)(state)}
-                    levelId={page.levelId}
-                    packId={page.packId}
                     previousBest={getLevelBest(page)(state)}
-                    onWin={
-                        (victory: Victory) => actions.completeLevel({
-                            ...victory,
-                            ...page,
-                        })
-                    }
                 />
             );
 
@@ -103,10 +117,18 @@ export const RenderPage = <S extends {}, P extends PackStatic<any>>({page, trans
                     onPressPack={(packId: number) => {
                         /**
                          * open pack if unlocked, or pop up unlock pack modal
-                         * //TODO: don't browse infinity packs -- can either handle here or in state with an "open pack" action
+                         * don't browse infinity packs -- can either handle here or in state with an "open
+                         * pack" action
                          */
                         if (getIsUnlocked(packId)(state)) {
-                            actions.browseLevels(packId)
+                            if (getIsInfinite(packId)(state)) {
+                                actions.playLevel({
+                                    packId,
+                                    levelId: 0,
+                                });
+                            } else {
+                                actions.browseLevels(packId);
+                            }
                         } else {
                             actions.openModal({
                                 type: ModalType.UNLOCK_PACK,

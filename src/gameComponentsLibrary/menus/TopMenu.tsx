@@ -1,7 +1,7 @@
 import React from "react";
 import {Appbar} from "react-native-paper";
 import {StyleProp, TextStyle, View, ViewStyle} from "react-native";
-import {I_TopMenuProps} from "../../universalGame/components/types-components";
+import {TopMenuProps} from "../../universalGame/components/types-components";
 import {Page} from "../../universalGame/state/pages";
 import {MaybeGenerate, resolveProp} from "../../lib";
 
@@ -21,7 +21,7 @@ export interface ExtraProps {
     onPressTitle?(): void;
 }
 
-export type Props = ExtraProps & I_TopMenuProps;
+export type Props = ExtraProps & TopMenuProps;
 
 /**
  * combines multiple components from Paper and allows passing of styles to each element
@@ -75,7 +75,7 @@ export const TopMenu = ({style, backStyle, settingsStyle, titleStyle, subtitleSt
 /**
  * HOC to pass in just in the extra props
  */
-export const makeTopMenu = (extra: ExtraProps & Partial<I_TopMenuProps>) =>
+export const makeTopMenu = (extra: ExtraProps & Partial<TopMenuProps>) =>
     (props: Props) => (
         <TopMenu {...props} {...extra}/>
     )

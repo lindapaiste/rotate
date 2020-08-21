@@ -1,5 +1,5 @@
 import React, {ReactNode, useRef} from "react";
-import {I_Point} from "../quilt/square/types";
+import {I_Point} from "../quilt/tile/types";
 import {PropTileSize} from "./types";
 import {View} from "react-native";
 

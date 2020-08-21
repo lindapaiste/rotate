@@ -2,7 +2,7 @@ import {isFunction} from "lodash";
 import chroma from "chroma-js";
 import {ComponentType} from "react";
 
-export {isFunction, random, sample, last, omit, round} from "lodash";
+export {isFunction, random, sample, last, omit, round, range} from "lodash";
 
 export const makeArray = <T>(length: number, value: T | ((i: number) => T)): T[] => {
     return [...new Array(length)].map((_, i) =>
@@ -10,8 +10,10 @@ export const makeArray = <T>(length: number, value: T | ((i: number) => T)): T[]
     );
 };
 
+export const randomHex = (): string => chroma.random().hex();
+
 export const randomHexes = (count: number): string[] => {
-    return makeArray(count, () => chroma.random().hex());
+    return makeArray(count, randomHex);
 }
 
 export type Unpack<T> = T extends Array<infer U> ? U : T;
