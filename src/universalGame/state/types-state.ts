@@ -1,30 +1,53 @@
-import {Page} from "./pages";
-import {Modal} from "./modals";
+import {AppPage} from "./pages";
+import {AppModal} from "./modals";
 
-export interface PropPackId {
-    packId: number;
-}
-
-export interface PropLevelId {
-    levelId: number;
-}
-
-export interface PropIsBack {
-    isGoingBack: boolean;
-}
-
-export interface LevelIdentifier {
-    packId: number;
-    levelId: number;
+/**
+ * Use state only for things which are variable.  Do not store packStatic in state.
+ *
+ * State stores the current screen (not persisted), user settings, and the user's progress through packs and levels.
+ *
+ * could add other sections like preferences, purchases, etc.
+ */
+export interface State<S> {
+    settings: S;
+    screen: ScreenState;
+    progress: PackState[];
 }
 
 export interface ScreenState {
-    current: Page;
-    previous: Page;
+    current: AppPage;
+    previous: AppPage;
     isTransitioning: boolean;
     isGoingBack: boolean;
-    modal: Modal | null;
+    modal: AppModal | null;
     //store modal transition here?
+}
+
+/**
+ * the changeable state associated with a given pack
+ */
+export interface PackState {
+    /**
+     * unique numeric identifier
+     */
+    packId: number;
+    /**
+     * whether the pack is unlocked
+     */
+    unlocked: boolean;
+    /**
+     * the number of levels which have been won
+     */
+    victoryCount: number;
+    /**
+     * raw data for each levels victories. It is a double array ( level, victories) because a level may have been won
+     * multiple times.  A level should have an empty array if never won.
+     */
+    levelVictories: StoredVictory[][];
+    /**
+     * an array of timestamps for each level.  includes times the level was played but not won
+     */
+    lastPlayed: (number | undefined)[];
 }
 
 export interface Victory {
@@ -37,94 +60,6 @@ export interface StoredVictory extends Victory {
     timestamp: number;
 }
 
-/**
- * progress can either by nested by pack,
- * or flat and keyed by a key representing the pack and level ids
- * nested is a triple array: packs, levels, victories, because a level may have been won multiple times
- */
-export type ProgressState = StoredVictory[][][];
-
-export interface Titles {
-    title: string;
-    subtitle: string;
-}
-
-export interface PackShared<L> {
-    title: string;
-    subtitle?: string;
-    image?: any;
-    packId: number;
-    initialUnlocked: boolean;
-    infinite: boolean;
-    levels?: L[];
-}
-
-/**
- * if a pack is not infinite, then it must contain an array of level props
- */
-export interface DefinedPack<L> extends PackShared<L> {
-    infinite: false;
-    levels: L[];
-}
-
-/**
- * infinite packs should not have their getLevel() function stored in state because
- * it is bad practice to store non-serializable objects such as functions
- *
- * instead, leave it up to the game instance to know how to handle an infinite level
- * this means that a separate component is needed for rendering a level without known props
- */
-export interface InfinitePack<L> extends PackShared<L> {
-    infinite: true;
-}
-
-/**
- * called PackStatic because these are the immutable properties of a pack
- * extend this interface to include other custom props
- * union declares that if infinite is true then getLevel must exist
- * and if it's false then levels array must exist
- */
-export type PackStatic<L> = PackShared<L> & (DefinedPack<L> | InfinitePack<L>)
-
-/**
- * get the level type from the Pack type
- */
-export type LevelType<P extends PackStatic<any>> = P extends PackStatic<infer L> ? L : never;
-
-/**
- * the changeable state associated with a given pack
- */
-export interface PackState {
-    unlocked: boolean;
-    packId: number;
-    victoryCount: number;
-    levelVictories: StoredVictory[][];
-    lastPlayed: (number | undefined)[]; //an array of timestamps for each level
-}
-
-
-
-/**
- * can have other sections like preferences, purchases, etc.
- * store level json here, or elsewhere?
- */
-
-
-/**
- * instead of applying a bunch of generics to State, use any or unknowns
- * and use conditional inferred types to get pieces of a specific instance of state
- *
- * things which are variable:
- * level props
- * extra props in pack
- * settings object
- */
-export interface State<S, P> {
-    settings: S;
-    screen: ScreenState;
-    progress: PackState[];
-    packs: P[];
-}
 
 /*
 from react useReducer type defs:
@@ -137,8 +72,4 @@ from react useReducer type defs:
 /**
  * get settings from State
  */
-export type StateSettings<S extends State<any, any>> = S extends State<infer T, any> ? T : never;
-
-export type StatePack<S extends State<any, any>> = S extends State<any, infer P> ? P : never;
-
-export type StateLevel<S extends State<any, any>> = StatePack<S> extends PackStatic<infer L> ? L : never;
+export type StateSettings<S extends State<any>> = S extends State<infer T> ? T : never;

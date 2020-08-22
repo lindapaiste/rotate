@@ -1,9 +1,10 @@
 import * as A from "./actionNames";
-import {LevelIdentifier, PropPackId, State, StateSettings, Victory} from "./types-state";
-import {Page} from "./pages";
-import {Modal} from "./modals";
+import {PackState, State, StateSettings, Victory} from "./types-state";
+import {AppPage} from "./pages";
+import {AppModal} from "./modals";
+import {LevelIdentifier, PackStatic} from "../components/types-pack";
 
-export type StateActions<S extends State<any, any>> = ActionType<StateSettings<S>>;
+export type StateActions<S extends State<any>> = ActionType<StateSettings<S>>;
 
 export type ActionType<Settings> = {
     /**
@@ -12,7 +13,7 @@ export type ActionType<Settings> = {
      * and does not need to be passed
      */
     type: typeof A.PRESS_BACK;
-    payload: { page?: Page };
+    payload: { page?: AppPage };
 } | {
     /**
      * no payload needed to browse packs
@@ -24,7 +25,7 @@ export type ActionType<Settings> = {
      * go to the select levels screen for a pack by passing the pack id
      */
     type: typeof A.BROWSE_PACK_LEVELS;
-    payload: PropPackId;
+    payload: { packId: number };
 } | {
     /**
      * begins the loading in of a level
@@ -57,7 +58,14 @@ export type ActionType<Settings> = {
      * need a pack id to unlock it
      */
     type: typeof A.UNLOCK_PACK;
-    payload: PropPackId;
+    payload: { packId: number };
+} | {
+    /**
+     * adding a new empty pack state requires the pack id as well as whether it is unlocked
+     * rely on the action creator to make a whole pack state, though could do this in the reducer as well
+     */
+    type: typeof A.INITIALIZE_PACK;
+    payload: PackState;
 } | {
     /**
      * no payload to unlock all packs
@@ -75,7 +83,7 @@ export type ActionType<Settings> = {
      * need to know the modal type and any other defining props
      */
     type: typeof A.OPEN_MODAL;
-    payload: Modal;
+    payload: AppModal;
 } | {
     /**
      * closing a modal doesn't require any data
@@ -95,6 +103,9 @@ export interface PropTimestamp {
  * define an object with a function which creates and dispatches an action for each action type
  */
 export interface ActionsObject<Settings> {
+
+    initializePack(pack: PackStatic<any>): void;
+
     unlockPack(packId: number): void;
 
     unlockAll(): void;
@@ -109,11 +120,11 @@ export interface ActionsObject<Settings> {
 
     completeLevel(props: Victory & LevelIdentifier): void;
 
-    goBack(page?: Page): void;
+    goBack(page?: AppPage): void;
 
     endTransition(): void;
 
-    openModal( modal: Modal): void;
+    openModal( modal: AppModal): void;
 
     closeModal(): void;
 }

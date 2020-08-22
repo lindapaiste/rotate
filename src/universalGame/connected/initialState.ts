@@ -1,14 +1,13 @@
 import {State} from "../state/types-state";
-import {StateProps} from "../components/types-game";
+import {InitialStateProps} from "../components/types-game";
 import {PageType} from "../state/pages";
 import {initialPackState} from "../state/empty-state";
 
 /**
  * create an initial state from an array of packs and an object of initial/default settings
  */
-export const createInitialState = <S extends State<any, any>>({initialSettings, packs}: StateProps<S>): S => {
+export const createInitialState = <S extends State<any>>({initialSettings, packs}: InitialStateProps<S>): S => {
     return {
-        packs,
         settings: initialSettings,
         screen: {
             current: {

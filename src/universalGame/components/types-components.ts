@@ -1,7 +1,8 @@
-import {Page} from "../state/pages";
+import {AppPage} from "../state/pages";
 import {ComponentType, ReactNode} from "react";
-import {LevelType, PackStatic, Victory} from "../state/types-state";
+import {Victory} from "../state/types-state";
 import {MaybeGenerate} from "../../lib";
+import {LevelType, PackStatic} from "./types-pack";
 
 /**
  * generics:
@@ -18,8 +19,8 @@ import {MaybeGenerate} from "../../lib";
  * could pass an animated value from 0 to 1 for the transition timing
  */
 export interface TransitionProps {
-    loadingIn: false | { from: Page };
-    loadingOut: false | { to: Page };
+    loadingIn: false | { from: AppPage };
+    loadingOut: false | { to: AppPage };
     isGoingBack: boolean;
     endTransition(): void;
 }
@@ -137,16 +138,16 @@ export interface StoreProps<P> {
 export interface TopMenuProps {
     hasBack: boolean;
     //allow these to be generators in the case that they are overwritten
-    title?: MaybeGenerate<ReactNode, Page>;
-    subtitle?: MaybeGenerate<ReactNode, Page>;
-    current: Page; //needed for conditionals
+    title?: MaybeGenerate<ReactNode, AppPage>;
+    subtitle?: MaybeGenerate<ReactNode, AppPage>;
+    current: AppPage; //needed for conditionals
     onPressBack(): void;
     onPressSettings?(): void;
 }
 
 export interface BackBarProps {
     //hasBack: boolean; not rendering at all if there is no page, so don't need this
-    backPage?: Page;
+    backPage?: AppPage;
     onPressBack(): void;
 }
 
@@ -159,28 +160,40 @@ export interface EditSettingsProps<S> {
  * is pack complete screen something separate from win screen?
  */
 
+/**
+ * helpers apply universal props to screen and modal
+ */
+export type Screen<T> = ComponentType<TransitionProps & T>
+export type Modal<T> = ComponentType<ModalProps & T>
+
+/**
+ * define an object of components with everything needed to render a game
+ */
 export interface PageComponents<S extends {}, P extends PackStatic<any>> {
     /**
      * screens
      */
     RenderAppLoading: ComponentType;
-    RenderSelectPack: ComponentType<TransitionProps & SelectPackProps<P>>;
-    RenderSelectLevel: ComponentType<TransitionProps & RenderPackProps<P>>;
+    RenderSelectPack: Screen<SelectPackProps<P>>;
+    RenderSelectLevel: Screen<RenderPackProps<P>>;
     //assume that PlayLevel includes the menu??
-    RenderPlayLevel: ComponentType<TransitionProps & PlayLevelProps<LevelType<P>>>;
-    RenderPlayInfiniteLevel: ComponentType<TransitionProps & PlayLevelProps<{}>>
-    RenderWinLevel: ComponentType<TransitionProps & WinScreenProps>;
+    RenderPlayLevel: Screen<PlayLevelProps<LevelType<P>>>;
+    RenderWinLevel: Screen<WinScreenProps>;
     /**
      * modals
      */
-    RenderUnlockPackModal: ComponentType<ModalProps & UnlockPackProps<P>>;
-    RenderStoreModal: ComponentType<ModalProps & StoreProps<P>>;
-    RenderSettingsModal: ComponentType<ModalProps & EditSettingsProps<S>>;
+    RenderUnlockPackModal: Modal<UnlockPackProps<P>>;
+    RenderStoreModal: Modal<StoreProps<P>>;
+    RenderSettingsModal: Modal<EditSettingsProps<S>>;
     /**
      * pieces
      */
     RenderTopMenu: ComponentType<TopMenuProps>;
 }
 
+/**
+ * inferred types
+ */
+export type CompPack<C> = C extends PageComponents<any, infer P> ? P : never;
 
-
+export type CompSettings<C> = C extends PageComponents<infer S, any> ? S : never;

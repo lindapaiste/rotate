@@ -1,4 +1,5 @@
-import {PackState, PackStatic} from "./types-state";
+import {PackState} from "./types-state";
+import {PackStatic} from "../components/types-pack";
 
 /**
  * need to make sure that anywhere which is creating an initial or empty state is using the right value for unlocked

@@ -1,7 +1,8 @@
-import {LevelIdentifier, Victory} from "./types-state";
+import {Victory} from "./types-state";
 import * as A from "./actionNames";
 import {ActionType} from "./types-actions";
-import {Page} from "./pages";
+import {AppPage} from "./pages";
+import {LevelIdentifier} from "../components/types-pack";
 
 /**
  * there should be at least one action creator for every action type
@@ -64,7 +65,7 @@ export const completeLevel = ({time, moves, stars, levelId, packId}: Victory & L
     }
 });
 
-export const goBack = (page?: Page): ActionType<any> => ({
+export const goBack = (page?: AppPage): ActionType<any> => ({
     type: A.PRESS_BACK,
     payload: {
         page

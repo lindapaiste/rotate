@@ -2,18 +2,16 @@ import {ActionType, StateActions} from "./types-actions";
 import * as A from "./actionNames";
 import {PackState, ScreenState, State, StateSettings} from "./types-state";
 import {replaceIndex} from "../../lib";
-import {Page, PageType} from "./pages";
-import {definitelyPack, getParentPage} from "./helpers";
+import {AppPage, PageType} from "./pages";
+import {getParentPage} from "../mapping/helpers";
 import {Reducer} from "redux";
-import {getLevelBest} from "./selectors";
+import {getLevelBest} from "../mapping/selectors";
 
-export const screen = (state: ScreenState, action: ActionType<any>, wholeState: State<any, any>): ScreenState => {
+export const screen = (state: ScreenState, action: ActionType<any>, wholeState: State<any>): ScreenState => {
     /**
      * helper function for creating a transition state
      */
-    const transitionTo = (page: Page, isGoingBack: boolean = false, previous = state.current): ScreenState => {
-        console.log("transitioning to");
-        console.log( page );
+    const transitionTo = (page: AppPage, isGoingBack: boolean = false, previous = state.current): ScreenState => {
         return ({
             previous,
             current: page,
@@ -69,6 +67,10 @@ export const screen = (state: ScreenState, action: ActionType<any>, wholeState: 
             })
         }
         case A.OPEN_MODAL:
+            console.log({
+                ...state,
+                modal: action.payload
+            });
             return {
                 ...state,
                 modal: action.payload
@@ -83,7 +85,7 @@ export const screen = (state: ScreenState, action: ActionType<any>, wholeState: 
     }
 }
 
-export const settings = <Settings>(state: Settings, action: ActionType<Settings>, wholeState: State<Settings, any>): Settings => {
+export const settings = <Settings>(state: Settings, action: ActionType<Settings>, wholeState: State<Settings>): Settings => {
     switch (action.type) {
         case A.UPDATE_SETTINGS:
             return {
@@ -95,7 +97,7 @@ export const settings = <Settings>(state: Settings, action: ActionType<Settings>
     }
 };
 
-export const progress = (state: PackState[], action: ActionType<any>, wholeState: State<any, any>): PackState[] => {
+export const progress = (state: PackState[], action: ActionType<any>, wholeState: State<any>): PackState[] => {
     /**
      * use a helper here in part because cannot use const/let with the same variables
      * such as pack and packId across multiple branches of the switch
@@ -105,7 +107,7 @@ export const progress = (state: PackState[], action: ActionType<any>, wholeState
      * it handles getting the existing pack data and replacing just this pack in the array
      */
     const updatePack = (packId: number, update: (pack: PackState) => Partial<PackState>): PackState[] => {
-        const current = definitelyPack(state[packId], packId, wholeState.packs[packId].initialUnlocked);
+        const current = state[packId];
         return replaceIndex(state, packId, {
             ...current,
             ...update(current),
@@ -115,6 +117,15 @@ export const progress = (state: PackState[], action: ActionType<any>, wholeState
      * switch between specific actions
      */
     switch (action.type) {
+        case A.INITIALIZE_PACK:
+            const existing = state[action.payload.packId];
+            if (existing) {
+                console.error("attempting to initialize a pack which already exists", action.payload);
+                return state;
+            }
+            return replaceIndex(
+                state, action.payload.packId, action.payload
+            );
         case A.UNLOCK_PACK:
             return updatePack(
                 action.payload.packId, () => ({
@@ -143,7 +154,8 @@ export const progress = (state: PackState[], action: ActionType<any>, wholeState
                 }
             );
         case A.PLAY_LEVEL:
-            //save last played date when starting level because want to know this even if the user leaves without winning
+            //save last played date when starting level because want to know this even if the user leaves without
+            // winning
             return updatePack(
                 action.payload.packId, (pack) => ({
                     lastPlayed: replaceIndex(pack.lastPlayed, action.payload.levelId, action.meta.timestamp)
@@ -157,12 +169,14 @@ export const progress = (state: PackState[], action: ActionType<any>, wholeState
 /**
  * custom combine reducers includes full state as third argument
  */
-export const reducer = <S extends State<any, any>>(state: S, action: StateActions<S>): S => ({
-    screen: screen(state.screen, action, state),
-    settings: settings<StateSettings<S>>(state.settings, action, state),
-    progress: progress(state.progress, action, state),
-    packs: state.packs, //never actually update this
-}) as S;
+export const reducer = <S extends State<any>>(state: S, action: StateActions<S>): S => {
+    console.log( action );
+    return {
+        screen: screen(state.screen, action, state),
+        settings: settings<StateSettings<S>>(state.settings, action, state),
+        progress: progress(state.progress, action, state),
+    } as S;
+}
 
 /**
  * the redux definition of a reducer requires that the state might be undefined
@@ -171,5 +185,5 @@ export const reducer = <S extends State<any, any>>(state: S, action: StateAction
  * react useReducer hook does not have this problem
  */
 //export const createReducer = <S, P>(initialState: State<S, P>): Reducer<State<S, P>, ActionType<S>> =>
-export const createReducer = <S extends State<any, any>>(initialState: S): Reducer<S, StateActions<S>> =>
+export const createReducer = <S extends State<any>>(initialState: S): Reducer<S, StateActions<S>> =>
     (state, action) => reducer(state || initialState, action);

@@ -1,8 +1,10 @@
 import {ActionsObject, ActionType} from "./types-actions";
 import * as A from "./actionNames";
-import {LevelIdentifier, Victory} from "./types-state";
-import {Page} from "./pages";
-import {Modal} from "./modals";
+import {Victory} from "./types-state";
+import {AppPage} from "./pages";
+import {AppModal} from "./modals";
+import {LevelIdentifier, PackStatic} from "../components/types-pack";
+import {initialPackState} from "./empty-state";
 
 /**
  * rather than passing around individual functions,
@@ -16,6 +18,11 @@ import {Modal} from "./modals";
 export const makeActions = <T>(dispatch: (action: ActionType<T>) => void): ActionsObject<T> => {
 
     return {
+
+        initializePack: (pack: PackStatic<any>) => dispatch({
+            type: A.INITIALIZE_PACK,
+            payload: initialPackState(pack),
+        }),
 
         unlockPack: (packId: number) => dispatch({
             type: A.UNLOCK_PACK,
@@ -79,14 +86,14 @@ export const makeActions = <T>(dispatch: (action: ActionType<T>) => void): Actio
         /**
          * can provide a page to go back to, otherwise assumes the stored previous page
          */
-        goBack: (page?: Page) => dispatch({
+        goBack: (page?: AppPage) => dispatch({
             type: A.PRESS_BACK,
             payload: {
                 page
             },
         }),
 
-        openModal: (modal: Modal) => dispatch({
+        openModal: (modal: AppModal) => dispatch({
             type: A.OPEN_MODAL,
             payload: modal,
         }),

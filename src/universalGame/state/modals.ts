@@ -18,4 +18,4 @@ type SpecificModal =  {
     packId: number;
 }
 
-export type Modal = GenericModal & SpecificModal;
+export type AppModal = GenericModal & SpecificModal;

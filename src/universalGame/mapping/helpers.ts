@@ -1,8 +1,9 @@
-import {DefinedPack, LevelIdentifier, PackState, PackStatic, StoredVictory, Victory} from "./types-state";
-import {emptyPackState} from "./empty-state";
-import {PackProps} from "../components/types-components";
+import {PackState, StoredVictory, Victory} from "../state/types-state";
+import {emptyPackState} from "../state/empty-state";
+import {PackProps, VictoryBooleans} from "../components/types-components";
 import {ifDefined} from "../../lib";
-import {Page, PageType} from "./pages";
+import {AppPage, PageType} from "../state/pages";
+import {DefinedPack, LevelIdentifier, PackStatic} from "../components/types-pack";
 
 export const getLevelKey = ({levelId, packId}: LevelIdentifier): string => {
     return packId + "_" + levelId;
@@ -66,7 +67,7 @@ export const packLevelCount = (packStatic: PackStatic<any>): number | null => {
 }
 
 /**
- * maps static properties of the pack and current pack state into standardized pack props interface
+ * maps static properties of the pack and current pack state into standardized PackProps interface
  */
 export const packToProps = <P extends PackStatic<any>>(packStatic: P, packState: PackState): PackProps<P> => {
     return {
@@ -87,7 +88,7 @@ export const levelProps = <L>(pack: DefinedPack<L>, levelId: number): L => {
     return pack.levels[levelId];
 }
 
-export const minimumMoves = <L>(props: L & { minimumMoves?: number }): number | null => { // L extends {minimumMoves: number} ? number : null
+export const getMinimumMoves = <L>(props: L & { minimumMoves?: number }): number | null => { // L extends {minimumMoves: number} ? number : null
     return ifDefined(props.minimumMoves, null);
 }
 
@@ -97,7 +98,7 @@ export const minimumMoves = <L>(props: L & { minimumMoves?: number }): number | 
 /**
  * define what page to go back to from any screen
  */
-export const getParentPage = (current: Page): Page | null => {
+export const getParentPage = (current: AppPage): AppPage | null => {
     switch (current.type) {
         case PageType.SELECT_LEVEL:
             return {
@@ -116,5 +117,25 @@ export const getParentPage = (current: Page): Page | null => {
     }
 }
 
-/** ----------------------------------TITLES----------------------------------------- **/
+/** ----------------------------------VICTORY----------------------------------------- **/
 
+/**
+ * fewest moves would be something stored in the level props, if it exists
+ */
+export const mapVictoryBooleans = (current: Victory, previousBest: Victory | null, minimumMoves: number | null): VictoryBooleans => {
+    const isPerfect = minimumMoves ? current.moves <= minimumMoves : undefined;
+    return previousBest === null ? {
+        isPerfect,
+        isBestMoves: true,
+        isBestTime: true,
+        isBestStars: true,
+    } : {
+        isPerfect,
+        isBestMoves: current.moves <= previousBest.moves,
+        isBestTime: current.time <= previousBest.time,
+        isBestStars: current.stars >= previousBest.stars,
+    }
+}
+
+
+/** ----------------------------------TITLES----------------------------------------- **/

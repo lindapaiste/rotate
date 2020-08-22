@@ -1,26 +1,47 @@
-import {State, StatePack, StateSettings} from "../state/types-state";
+import {State, StateSettings} from "../state/types-state";
 import {PageComponents} from "./types-components";
 import {Dispatch} from "react";
 import {ActionsObject, ActionType} from "../state/types-actions";
 import {IconLibrary} from "./screen/Icons";
+import {PackStatic} from "./types-pack";
 
-export interface StateProps<S extends State<any, any>> {
+/**
+ * props which are needed to initialize the state
+ * pack static data is not stored in state, but is needed to map to an initial pack state (specifically the value of
+ * initialUnlocked)
+ */
+export interface InitialStateProps<S extends State<any>, P extends PackStatic<any> = PackStatic<any>> {
     initialSettings: StateSettings<S>;
-    packs: StatePack<S>[];
+    packs: P[];
 }
 
-export interface DisplayProps<S extends State<any, any>> {
-    Components: PageComponents<StateSettings<S>, StatePack<S>>;
+
+export interface PropPacks<L> {
+    packs: PackStatic<L>[];
+}
+
+/**
+ * information about how to render a game
+ */
+export interface DisplayProps<S extends State<any>, P extends PackStatic<any>> {
+    Components: PageComponents<StateSettings<S>, P>;
     theme: ReactNativePaper.Theme;
     icons?: IconLibrary;
 }
 
+export type GameProps<Settings, P extends PackStatic<any>> = InitialStateProps<State<Settings>, P> & DisplayProps<State<Settings>, P>
 
 
-export interface GameConnected<S extends State<any, any>> {
+export interface GameConnected<S extends State<any>, P extends PackStatic<any>> {
     state: S
     dispatch?: Dispatch<ActionType<StateSettings<S>>>;
     actions: ActionsObject<StateSettings<S>>;
+    packs: P[];
+}
+
+export type ScreenProps<S extends State<any>, P extends PackStatic<any>> = GameConnected<S, P> & {
+    Components: PageComponents<StateSettings<S>, P>;
+    // doesn't need theme or icons because Paper Provider already established
 }
 
 

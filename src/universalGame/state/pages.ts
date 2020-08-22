@@ -48,4 +48,4 @@ type SpecificPage = {
     }
 }
 
-export type Page = GenericPage & SpecificPage;
+export type AppPage = GenericPage & SpecificPage;
