@@ -93,29 +93,6 @@ export const getMinimumMoves = <L>(props: L & { minimumMoves?: number }): number
 }
 
 
-/** ----------------------------------BACK----------------------------------------- **/
-
-/**
- * define what page to go back to from any screen
- */
-export const getParentPage = (current: AppPage): AppPage | null => {
-    switch (current.type) {
-        case PageType.SELECT_LEVEL:
-            return {
-                type: PageType.SELECT_PACK
-            }
-        case PageType.WIN_LEVEL:
-        case PageType.PLAY_LEVEL:
-            return {
-                type: PageType.SELECT_LEVEL,
-                packId: current.packId,
-            }
-        case PageType.APP_LOADING:
-        case PageType.HOME:
-        case PageType.SELECT_PACK:
-            return null;
-    }
-}
 
 /** ----------------------------------VICTORY----------------------------------------- **/
 

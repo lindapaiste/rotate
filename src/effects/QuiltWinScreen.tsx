@@ -14,6 +14,10 @@ export const QuiltWinScreen = (props : TransitionProps & WinScreenProps) => {
                 duration: {
                     in: 2000,
                     out: 500,
+                },
+                onEnd: {
+                    in: () => props.endTransition(),
+                    out: () => undefined,
                 }
             })}
             >

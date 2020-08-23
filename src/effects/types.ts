@@ -35,4 +35,5 @@ export interface TimerSettings {
     duration?: number;
     delay?: number;
     onEnd?(result: Animated.EndResult): void;
+    useNativeValue?: boolean;
 }

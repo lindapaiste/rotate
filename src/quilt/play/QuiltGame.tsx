@@ -6,13 +6,14 @@ import {QuiltWinScreen} from "../../effects/QuiltWinScreen";
 import {makeTopMenu} from "../../gameComponentsLibrary/menus/TopMenu";
 import {withSlide} from "../../effects/withSlide";
 import {RenderQuiltLevel} from "./QuiltLevel";
-import {RenderInfiniteQuiltLevel} from "./InfiniteQuiltLevel";
 import {SmartSizeGrid} from "../../gameComponentsLibrary/levelsGrid/SmartSizeGrid";
 import {ButtonThumb} from "../../gameComponentsLibrary/levelsGrid/ButtonThumb";
 import {useDimensions} from "../../lib/useDimensions";
 import {PacksList} from "../../gameComponentsLibrary/selectPack/PacksList";
 import {PackItem} from "../../gameComponentsLibrary/selectPack/PackItem";
 import React from "react";
+import QuiltLoading from "../../layout/QuiltLoading";
+import {withSlideOnBack} from "../../effects/withSlideOnBack";
 
 
 /**
@@ -46,7 +47,8 @@ export default () => (
             packs={packs}
             theme={DarkTheme}
             Components={{
-                RenderWinLevel: QuiltWinScreen,//withSlide(BasicWinScreen),
+                RenderAppLoading: QuiltLoading,
+                RenderWinLevel: withSlideOnBack(QuiltWinScreen),//withSlide(BasicWinScreen),
                 RenderTopMenu: makeTopMenu({
                     titleStyle: {
                         alignSelf: "center",
@@ -54,8 +56,7 @@ export default () => (
                     }
                 }),
                 //@ts-ignore
-                RenderPlayLevel: withSlide(RenderQuiltLevel), //I want a slide if hitting the back button, but not if going to or from win screen withSlide(RenderQuiltLevel),
-                RenderPlayInfiniteLevel: withSlide(RenderInfiniteQuiltLevel),
+                RenderPlayLevel: withSlideOnBack(RenderQuiltLevel), //I want a slide if hitting the back button, but not if going to or from win screen withSlide(RenderQuiltLevel),
                 RenderUnlockPackModal: (props) => (
                     <Card>
                         <Card.Content>

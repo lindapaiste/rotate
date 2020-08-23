@@ -1,6 +1,7 @@
 import {TimerSettings} from "./types";
 import {Animated} from "react-native";
 import {useEffect, useRef} from "react";
+import {maybeCall} from "@lindapaiste/layout-animated/lib/util";
 
 export interface Returns {
     timer: Animated.Value;
@@ -23,9 +24,11 @@ export const useTriggeredTimer = (boolean: boolean, settings: TimerSettings): An
                 ...settings,
                 toValue: 1,
                 useNativeDriver: true,
-            });
+            }).start(
+                maybeCall(settings.onEnd)
+            );
         } else {
-            timer.stopAnimation();
+            timer.stopAnimation(); //or animate back to 0?
         }
 
         return () => timer.removeAllListeners();

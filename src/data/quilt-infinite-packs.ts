@@ -1,5 +1,5 @@
-import {PackStatic} from "../universalGame/state/types-state";
 import {random} from "../lib";
+import {PackStatic} from "../universalGame/components/types-pack";
 
 
 /**

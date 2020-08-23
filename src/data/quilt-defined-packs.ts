@@ -1,7 +1,7 @@
-import {PackStatic} from "../universalGame/state/types-state";
 import {makeArray} from "../lib";
 import {makeLevel} from "../quilt/generate/makeLevel";
 import {QuiltLevelProps} from "../quilt/generate/types";
+import {PackStatic} from "../universalGame/components/types-pack";
 
 const packs: PackStatic<QuiltLevelProps>[] = [
     {
@@ -25,11 +25,11 @@ const packs: PackStatic<QuiltLevelProps>[] = [
             width: 6,
             height: 8,
         })),
-        /*getLevel: () => makeLevel({
+        getLevel: () => makeLevel({
             colorCount: {min: 3, max: 6},
             width: 6,
             height: 8,
-        })*/
+        })
     },
     {
         title: "Hard",

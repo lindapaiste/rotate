@@ -25,12 +25,6 @@ export const RenderLayout = <T extends any = any>({state, dispatch, RenderTile, 
     const layout = getLayout(state);
     const {width, height, tileSize, rotationIncrement = 90} = layout;
 
-
-    const center = {
-        x: .5 * width * tileSize,
-        y: .5 * height * tileSize,
-    }
-
     return (
         <Animated.View
             style={{

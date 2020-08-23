@@ -43,5 +43,7 @@ export default <S extends State<any>>({initialSettings, packs}: InitialStateProp
 
     const persistor = persistStore(store);
 
+    persistor.purge();
+
     return {store, persistor};
 };

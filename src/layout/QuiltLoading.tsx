@@ -5,17 +5,14 @@ import {Text} from "react-native-paper";
 import {QuiltTile} from "../quilt/tile/QuiltTile";
 import {MaybeGenerate, randomHex, range} from "../lib";
 import {SideColors} from "../quilt/tile/types";
-
-export interface Props {
-    done?: boolean;
-}
+import {TransitionProps} from "../universalGame/components/types-components";
 
 /**
  * want a four-color tile that appears, gets small and rotates, appears again...
  * important that it stops long enough to be seen, not just a continuous spin
  * want to colors to reset when it is at the smallest point
  */
-export default ({done = false}: Props) => {
+export default () => {
 
     const anim = useRef(new Animated.Value(0)).current;
 

@@ -30,7 +30,7 @@ export const screen = (state: ScreenState, action: ActionType<any>, wholeState: 
                 isTransitioning: false,
             }
         case A.PRESS_BACK: {
-            const target = action.payload.page || getParentPage(state.current);
+            const target = action.payload.page;
             if (target === null) {
                 return state;
             } else {

@@ -84,9 +84,9 @@ export const makeActions = <T>(dispatch: (action: ActionType<T>) => void): Actio
         }),
 
         /**
-         * can provide a page to go back to, otherwise assumes the stored previous page
+         * can provide a page to go back to, otherwise assumes the parent page
          */
-        goBack: (page?: AppPage) => dispatch({
+        goBack: (page: AppPage) => dispatch({
             type: A.PRESS_BACK,
             payload: {
                 page

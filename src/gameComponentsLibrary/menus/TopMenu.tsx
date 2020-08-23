@@ -2,7 +2,7 @@ import React from "react";
 import {Appbar} from "react-native-paper";
 import {StyleProp, TextStyle, View, ViewStyle} from "react-native";
 import {TopMenuProps} from "../../universalGame/components/types-components";
-import {Page} from "../../universalGame/state/pages";
+import {AppPage} from "../../universalGame/state/pages";
 import {MaybeGenerate, resolveProp} from "../../lib";
 
 /**
@@ -14,9 +14,9 @@ export interface ExtraProps {
     settingsStyle?: StyleProp<ViewStyle>;
     titleStyle?: StyleProp<TextStyle>;
     subtitleStyle?: StyleProp<TextStyle>;
-    showTitle?: boolean | ((page: Page) => boolean);
+    showTitle?: boolean | ((page: AppPage) => boolean);
     //custom right hand side?
-    showSettings?: boolean | ((page: Page) => boolean);
+    showSettings?: boolean | ((page: AppPage) => boolean);
 
     onPressTitle?(): void;
 }
@@ -33,7 +33,7 @@ export type Props = ExtraProps & TopMenuProps;
 
 export const TopMenu = ({style, backStyle, settingsStyle, titleStyle, subtitleStyle, hasBack, onPressBack, title, subtitle, onPressTitle, showSettings = true, showTitle = true, onPressSettings, current}: Props) => {
 
-    const resolve = (prop: MaybeGenerate<any, Page>) =>
+    const resolve = (prop: MaybeGenerate<any, AppPage>) =>
         resolveProp(prop, current);
 
     return (

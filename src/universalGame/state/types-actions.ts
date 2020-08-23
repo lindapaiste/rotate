@@ -13,7 +13,7 @@ export type ActionType<Settings> = {
      * and does not need to be passed
      */
     type: typeof A.PRESS_BACK;
-    payload: { page?: AppPage };
+    payload: { page: AppPage };
 } | {
     /**
      * no payload needed to browse packs
@@ -120,7 +120,7 @@ export interface ActionsObject<Settings> {
 
     completeLevel(props: Victory & LevelIdentifier): void;
 
-    goBack(page?: AppPage): void;
+    goBack(page: AppPage): void;
 
     endTransition(): void;
 

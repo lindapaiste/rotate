@@ -79,11 +79,3 @@ export const getPackLastPlayed = (packId: number) => (state: State<any>): number
 export const getScreen = (state: State<any>): ScreenState => {
     return state.screen;
 }
-
-/**
- * whether or not to show a back button based on the value of the current screen
- */
-export const hasBack = (state: State<any>): boolean => {
-    return getParentPage(state.screen.current) !== null;
-}
-

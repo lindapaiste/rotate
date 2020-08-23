@@ -66,7 +66,7 @@ export const ButtonThumb = ({best, size, levelId, onPress, style, labelStyle, co
              * somehow content does inherit the vertical margin from button, but does not get the horizontal margin
              * but when pressed, pressed highlight extends horizontally and not vertically
              */
-            marginHorizontal: "30%",
+            // marginHorizontal: "30%",  //this breaks things on react-native-web
             // borderColor: "orange",
             // borderWidth: 1,
             flex: 1,

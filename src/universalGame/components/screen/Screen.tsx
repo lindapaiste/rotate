@@ -1,16 +1,15 @@
 import React, {useState} from "react";
 import {State} from "../../state/types-state";
-import {getScreen, hasBack} from "../../mapping/selectors";
+import {getScreen} from "../../mapping/selectors";
 import {Dimensions, View} from "react-native";
-import {Modal, Portal, useTheme} from "react-native-paper";
-import {ModalType} from "../../state/modals";
+import {Portal, useTheme} from "react-native-paper";
 import {RenderModal} from "./Modal";
 import {RenderPage} from "./Page";
 import {ScreenProps} from "../types-game";
-import {getTitles} from "../../mapping/pack-selectors";
 import {PackStatic} from "../types-pack";
 import {useSelector} from "react-redux";
-import {centerContents} from "@lindapaiste/layout";
+import {ModalEffect} from "./ModalEffect";
+import {getTopMenuProps} from "../../mapping/selectProps";
 
 /**
  * Screen assumes that state has already been set up and is passed in
@@ -73,11 +72,7 @@ export const Screen = <S extends State<any>, P extends PackStatic<any>>(rProps: 
                     onLayout={e => setMenuHeight(e.nativeEvent.layout.height)}
                 >
                     <Components.RenderTopMenu
-                        hasBack={hasBack(state)}
-                        onPressBack={() => actions.goBack()}  //don't want to pass event e as the prop page
-                        onPressSettings={() => actions.openModal({type: ModalType.SETTINGS})}
-                        current={current}
-                        {...getTitles({page: current, packs})}
+                        {...getTopMenuProps({...current, ...props})}
                     />
                 </View>
                 <View
@@ -96,24 +91,14 @@ export const Screen = <S extends State<any>, P extends PackStatic<any>>(rProps: 
                 </View>
             </View>
             {
-                modal !== null && (
-                    <Portal>
-                        <View
-                            style={[{flex: 1}, centerContents]}
-                        >
-                            <Modal
-                                visible={true}
-                                dismissable={true}
-                                onDismiss={() => actions.closeModal()}
-                            >
-                                <RenderModal
-                                    {...props}
-                                    modal={modal}
-                                />
-                            </Modal>
-                        </View>
-                    </Portal>
-                )
+                <ModalEffect modal={modal} closeModal={actions.closeModal}>
+                    {(definiteModal) => (
+                        <RenderModal
+                            {...props}
+                            modal={definiteModal}
+                        />
+                    )}
+                </ModalEffect>
             }
         </>
     )
