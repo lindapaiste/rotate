@@ -65,7 +65,7 @@ export const completeLevel = ({time, moves, stars, levelId, packId}: Victory & L
     }
 });
 
-export const goBack = (page?: AppPage): ActionType<any> => ({
+export const goBack = (page: AppPage): ActionType<any> => ({
     type: A.PRESS_BACK,
     payload: {
         page
