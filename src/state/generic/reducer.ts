@@ -1,81 +1,121 @@
-import {LevelState} from "./types";
-import {ActionTypes} from "./actions";
-import * as A from "./actionNames";
-import {replaceIndex, last} from "../../lib";
+import {Hint, InitialTile, LevelLayout} from "./types";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {newLevelState} from "./initialState";
 
-export const reducer = <T>(state: LevelState<T>, action: ActionTypes<T>): LevelState<T> => {
-    switch (action.type) {
-        case A.ROTATE:
-            const {id} = action.payload;
+// Note: moveCount is not always the same as history.length due to removal of frozen tiles.
+
+/**
+ * Useless dummy state.
+ * It is expected that loadLevel will be called before any other actions.
+ */
+const initialState = newLevelState<any>({width: 0, height: 0, tileSize: 0}, []);
+
+const rotationLevelSlice = createSlice({
+    name: 'rotationLevel',
+    initialState,
+    reducers: {
+        /**
+         * Rotate a given tile based on the id in the action payload.
+         */
+        rotate: (state, {payload: id}: PayloadAction<number>) => {
             // don't rotate frozen tiles
-            if ( state.frozen.includes(id) ) {
-                return state;
-            }
+            if (state.frozen.includes(id)) return;
             console.log("rotating tile # " + id);
-            return {
-                ...state,
-                rotations: replaceIndex(state.rotations, id, state.rotations[id] + 1),
-                moveCount: state.moveCount + 1,
-                history: [...state.history, id],
-            }
-        case A.UNDO:
-            const lastId = last(state.history);
-            if ( lastId !== undefined ) {
-                return {
-                    ...state,
-                    rotations: replaceIndex(state.rotations, lastId, state.rotations[lastId] - 1),
-                    moveCount: state.moveCount - 1,
-                    history: state.history.slice(0, -1),
-                }
-            } else return state;
-        case A.RESTART:
-            //could store the initial rotations, but can also loop through history
-            return {
-                ...state,
-                rotations: state.history.reduce(
-                    (rotations, id) => replaceIndex(rotations, id, rotations[id] - 1),
-                    state.rotations
-                ),
-                moveCount: 0,
-                history: [],
-                startTime: action.payload.time
-            }
-        case A.LOAD_LEVEL:
-            //replaces the entire state
-            return action.payload;
-        case A.RESIZE:
-            const {tileSize} = action.payload;
-            return {
-                ...state,
-                layout: {
-                    ...state.layout,
-                    tileSize,
-                }
-            }
-        case A.COMPLETE_LEVEL:
-            return {
-                ...state,
-                didComplete: true,
-            }
-        case A.START_TIME:
-            return {
-                ...state,
-                startTime: action.payload.time,
-            }
-        case A.APPLY_HINT:
-            //need to make sure that applying a hint doesn't cause any issues with history.  undo shouldn't rotate it.  if restarting, keep the hint
-            //can achieve this by removing all instances of this tile id from history array
-            const hintId = action.payload.id;
-            return {
-                ...state,
-                frozen: [...state.frozen, hintId],
-                history: state.history.filter( id => id !== hintId ),
-                //moveCount penalty +5
-                moveCount: state.moveCount + 5,
-                //rotate clockwise to next increment
-                rotations: replaceIndex(state.rotations, hintId, state.rotations[hintId] + action.payload.rotations ),
-            }
-        default:
-            return state;
+            // apply rotation
+            state.rotations[id]++;
+            // increment move count
+            state.moveCount++;
+            // add to history
+            state.history.push(id);
+        },
+        /**
+         * Undo the last rotation.
+         */
+        undo: (state) => {
+            // remove the id from the history array
+            const lastId = state.history.pop();
+            // exit if nothing to undo
+            if (!lastId) return;
+            // decrement move count
+            state.moveCount--;
+            // undo rotation
+            state.rotations[lastId]--;
+        },
+        /**
+         * Restart the level.
+         * Could store the initial rotations, but can also loop through history.
+         * Note: does not change frozen tiles.
+         */
+        restart: {
+            reducer: (state, {payload: time}: PayloadAction<number>) => {
+                // undo all rotations, unless frozen
+                state.history.forEach(id => {
+                    if (!state.frozen.includes(id)) { // not actually necessary right now because the hint removes it
+                        state.rotations[id]--;
+                    }
+                });
+                // reset move count
+                state.moveCount = 0;
+                // reset history
+                state.history = [];
+                // reset startTime
+                state.startTime = time;
+            },
+            prepare: () => ({ payload: Date.now() })
+        },
+        /**
+         * Replace the entire state.
+         * Provide the layout and the tiles, newLevelState helper function does the rest.
+         */
+        loadLevel: (_, {payload}: PayloadAction<LevelLayout & {tiles: InitialTile<any>[]}>) => {
+            const {tiles, ...layout} = payload;
+            return newLevelState(layout, tiles);
+        },
+        /**
+         * Respond to window resizes by adjusting the tile size.
+         * TODO: might want to move calculation logic to redux instead of in a hook.
+         */
+        resize: (state, {payload: tileSize}: PayloadAction<number>) => {
+            state.layout.tileSize = tileSize;
+        },
+        /**
+         * Mark the level as completed.
+         */
+        completeLevel: (state) => {
+            state.didComplete = true;
+        },
+        /**
+         * Starting the timer is a separate action from loading the level
+         * because the timer doesn't start until the animation ends.
+         */
+        startTimer: {
+            reducer: (state, {payload: time}: PayloadAction<number>) => {
+                state.startTime = time;
+            },
+            prepare: () => ({ payload: Date.now() })
+        },
+        /**
+         * Move a tile to its correct rotations and freeze it to prevent future rotation.
+         * Adds a penalty to the move count (default 5).
+         *
+         * Note: need to make sure that applying a hint doesn't cause any issues with history. Undo shouldn't rotate it.
+         * If restarting, keep the hint. Can achieve this by removing all instances of this tile id from history array.
+         *
+         * Note: would ideally like to get rotations from state instead of payload,
+         * but quilt and image need to handle it differently.
+         */
+        applyHint: (state, {payload}: PayloadAction<Hint>) => {
+            const {id, penalty = 5, rotations} = payload;
+            // freeze
+            state.frozen.push(id);
+            // remove from history
+            state.history = state.history.filter(moved => moved !== id);
+            // add penalty
+            state.moveCount += penalty;
+            // rotate clockwise to next increment
+            state.rotations[id] += rotations;
+        }
     }
-}
+});
+
+export const {reducer, actions} = rotationLevelSlice;

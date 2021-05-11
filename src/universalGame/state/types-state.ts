@@ -60,15 +60,6 @@ export interface StoredVictory extends Victory {
     timestamp: number;
 }
 
-
-/*
-from react useReducer type defs:
-
-    type Reducer<S, A> = (prevState: S, action: A) => S;
-    type ReducerState<R extends Reducer<any, any>> = R extends Reducer<infer S, any> ? S : never;
-    type ReducerAction<R extends Reducer<any, any>> = R extends Reducer<any, infer A> ? A : never;
- */
-
 /**
  * get settings from State
  */

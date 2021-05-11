@@ -8,7 +8,7 @@ import {InitialTile} from "../state/generic/types";
 import SourceAreaCalc from "./SourceAreaCalc";
 import {CroppedImage} from "./CroppedImage";
 import RenderLayout from "../grid/RenderLayout";
-import {newLevelState} from "../state/generic/emptyState";
+import {newLevelState} from "../state/generic/initialState";
 
 /**
  * what data, if any, do I actually need to store to tiles state?

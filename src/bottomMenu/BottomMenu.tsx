@@ -1,8 +1,8 @@
 import {LevelConnected} from "../grid/types";
 import {BottomMenuChildren} from "../gameComponentsLibrary/menus/BottomMenu";
-import React, {useState} from "react";
+import React from "react";
 import {IconButton} from "react-native-paper";
-import {hint, restart, undo} from "../state/generic/actions";
+import {applyHint, restart, undo} from "../state/generic/actions";
 import {Hint, LevelState} from "../state/generic/types";
 
 /**
@@ -60,7 +60,7 @@ export const BottomMenu = <T extends any>({state, dispatch, getHint, height = 50
                 onPress={() => {
                     const found = getHint(state);
                     if ( found ) {
-                        dispatch(hint(found));
+                        dispatch(applyHint(found));
                     } else {
                         console.warn("no hint found");
                     }

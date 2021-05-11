@@ -3,9 +3,10 @@ import * as A from "./actionNames";
 import {PackState, ScreenState, State, StateSettings} from "./types-state";
 import {replaceIndex} from "../../lib";
 import {AppPage, PageType} from "./pages";
-import {getParentPage} from "../mapping/helpers";
 import {Reducer} from "redux";
 import {getLevelBest} from "../mapping/selectors";
+
+// TODO: use react-navigation and remove screen info from redux
 
 export const screen = (state: ScreenState, action: ActionType<any>, wholeState: State<any>): ScreenState => {
     /**

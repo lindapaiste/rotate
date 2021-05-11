@@ -15,8 +15,8 @@ export interface Props {
 
 export const scaleInEffect = ({timer, start = 0, end = 1, startValue = 0, endValue = 1, maximumValue, extrapolate = "clamp"}: Props) => {
     return timer.interpolate({
-        inputRange: mapRange([0, .8, .9, 1], start, end),
-        outputRange: [startValue, endValue, maximumValue || endValue * 1.15, endValue],
+        inputRange: mapRange([0, .4, .6, .8, 1], start, end),
+        outputRange: [startValue, endValue, maximumValue || endValue * 1.15, .9 * endValue, endValue],
         extrapolate,
     });
 }

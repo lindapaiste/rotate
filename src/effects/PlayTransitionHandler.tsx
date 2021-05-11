@@ -1,7 +1,23 @@
 import React, {PropsWithChildren} from "react";
 import {TransitionProps} from "../universalGame/components/types-components";
-import { Animated } from "react-native";
-import {useReactiveAnimation} from "./useReactiveAnimation";
+import {Animated} from "react-native";
+import {defaultMapStateToTranslate, makeUseTranslateXSlide} from "./useTranslateXSlide";
+import {PageType} from "../universalGame/state/pages";
+import {SLIDE_DURATION} from "../quilt/play/QuiltGame";
+
+/**
+ * use slide everywhere except when loading out into win screen
+ */
+const useTranslateX = makeUseTranslateXSlide(
+    (props) => {
+        if (props.loadingOut && props.loadingOut.to.type === PageType.WIN_LEVEL) {
+            return {
+                toValue: 0,
+                initialValue: 0,
+            }
+        } else return defaultMapStateToTranslate(props);
+    }
+);
 
 
 /**
@@ -10,19 +26,16 @@ import {useReactiveAnimation} from "./useReactiveAnimation";
  * loading in can be from continue button on win screen, select levels screen, or select pack screen if infinite
  */
 
-export default ({children, loadingIn, loadingOut, isGoingBack, endTransition}: PropsWithChildren<TransitionProps>) => {
+export default ({children, ...props}: PropsWithChildren<TransitionProps>) => {
 
-    const toTranslateX = loadingOut && isGoingBack ? -1 : 0;
-
-    const translateX = useReactiveAnimation(toTranslateX, {useNativeDriver: true}); //this is a load out, so it doesn't need to end transition
-
+    const translateX = useTranslateX(props, {duration: SLIDE_DURATION});
 
     return (
         <Animated.View
             style={{
+                flex: 1,
                 transform: [{translateX}]
             }}
-
         >
             {children}
         </Animated.View>

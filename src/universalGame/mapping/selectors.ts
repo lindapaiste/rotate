@@ -1,6 +1,6 @@
 import {PackState, ScreenState, State, StoredVictory, Victory} from "../state/types-state";
 import {emptyPackState} from "../state/empty-state";
-import {getParentPage, levelBest, packLastPlayed} from "./helpers";
+import {levelBest, packLastPlayed} from "./helpers";
 import {ifNotNull} from "../../lib";
 import {LevelIdentifier} from "../components/types-pack";
 

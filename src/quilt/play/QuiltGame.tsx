@@ -2,7 +2,7 @@ import Game from "../../universalGame";
 import {MaterialIcons, SimpleLineIcons} from "@expo/vector-icons";
 import packs from "../../data/quilt-defined-packs";
 import {Button, Card, DarkTheme, Modal, Text, Title} from "react-native-paper";
-import {QuiltWinScreen} from "../../effects/QuiltWinScreen";
+import QuiltWinScreen from "../../effects/QuiltWinScreen";
 import {makeTopMenu} from "../../gameComponentsLibrary/menus/TopMenu";
 import {withSlide} from "../../effects/withSlide";
 import {RenderQuiltLevel} from "./QuiltLevel";
@@ -14,7 +14,10 @@ import {PackItem} from "../../gameComponentsLibrary/selectPack/PackItem";
 import React from "react";
 import QuiltLoading from "../../layout/QuiltLoading";
 import {withSlideOnBack} from "../../effects/withSlideOnBack";
+import PlayTransitionHandler from "../../effects/PlayTransitionHandler";
 
+
+export const SLIDE_DURATION = 500;
 
 /**
  * put all of the pieces together into the Game package
@@ -48,7 +51,7 @@ export default () => (
             theme={DarkTheme}
             Components={{
                 RenderAppLoading: QuiltLoading,
-                RenderWinLevel: withSlideOnBack(QuiltWinScreen),//withSlide(BasicWinScreen),
+                RenderWinLevel: QuiltWinScreen,
                 RenderTopMenu: makeTopMenu({
                     titleStyle: {
                         alignSelf: "center",
@@ -56,7 +59,13 @@ export default () => (
                     }
                 }),
                 //@ts-ignore
-                RenderPlayLevel: withSlideOnBack(RenderQuiltLevel), //I want a slide if hitting the back button, but not if going to or from win screen withSlide(RenderQuiltLevel),
+                RenderPlayLevel: (props) => (
+                    <PlayTransitionHandler {...props}>
+                        <RenderQuiltLevel {...props}/>
+                    </PlayTransitionHandler>
+                ),
+
+                    //withSlideOnBack(RenderQuiltLevel), //I want a slide if hitting the back button, but not if going to or from win screen withSlide(RenderQuiltLevel),
                 RenderUnlockPackModal: (props) => (
                     <Card>
                         <Card.Content>
@@ -86,7 +95,9 @@ export default () => (
                             maxThumbSize={100}
                             {...props}
                         />
-                    )),
+                    ),
+                    {duration: SLIDE_DURATION}
+                    ),
                 RenderSelectPack: withSlide(
                     (props) => (
                         <PacksList
@@ -94,7 +105,8 @@ export default () => (
                             //@ts-ignore
                             RenderItem={(props) => <PackItem {...props} />}
                         />
-                    )
+                    ),
+                    {duration: SLIDE_DURATION}
                 )
             }}
         />

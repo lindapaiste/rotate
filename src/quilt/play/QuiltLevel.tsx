@@ -1,8 +1,7 @@
 import {PlayLevelProps, TransitionProps} from "../../universalGame/components/types-components";
 import {useTileSizing} from "../../layout";
-import {newLevelState} from "../../state/generic/emptyState";
+import {newLevelState} from "../../state/generic/initialState";
 import React, {useEffect, useReducer, useState} from "react";
-import {QuiltLevelReducer} from "./types";
 import {reducer} from "../../state/generic/reducer";
 import {completeLevel, loadLevel, resize, startTimer} from "../../state/generic/actions";
 import {findHint, isWin} from "../../state/quilt/selectors";
@@ -14,7 +13,6 @@ import {View} from "react-native";
 import {SlideUp} from "../../effects/SlideUp";
 import {useLoadTimers} from "../../effects/useLoadTimers";
 import {QuiltLevelProps} from "../generate/types";
-import WinChecker from "../../state/quilt/WinChecker";
 
 
 export const RenderQuiltLevel = (props: PlayLevelProps<QuiltLevelProps> & TransitionProps) => {
@@ -40,7 +38,7 @@ export const RenderQuiltLevel = (props: PlayLevelProps<QuiltLevelProps> & Transi
     /**
      * create level reducer with an initial state from the level props
      */
-    const [state, dispatch] = useReducer<QuiltLevelReducer>(
+    const [state, dispatch] = useReducer(
         reducer,
         newLevelState({width, height, tileSize}, tiles)
     );
@@ -53,7 +51,7 @@ export const RenderQuiltLevel = (props: PlayLevelProps<QuiltLevelProps> & Transi
     useEffect(
         () => {
             if (loadingIn) {
-                dispatch(loadLevel({width, height, tileSize}, tiles))
+                dispatch(loadLevel({width, height, tileSize, tiles}))
             }
         },
         [loadingIn, width, height, tiles]
@@ -68,7 +66,7 @@ export const RenderQuiltLevel = (props: PlayLevelProps<QuiltLevelProps> & Transi
      */
     const isVictory = isWin(state);
 
-    const [preLoadingOut, setPreLoadingOut] = useState( false );
+    const [preLoadingOut, setPreLoadingOut] = useState(false);
 
     useEffect(() => {
             if (isVictory && !state.didComplete) {
@@ -83,7 +81,7 @@ export const RenderQuiltLevel = (props: PlayLevelProps<QuiltLevelProps> & Transi
     )
 
     const timers = useLoadTimers({
-        loadingIn : !! loadingIn,
+        loadingIn: !!loadingIn,
         loadingOut: preLoadingOut,
         duration: {
             in: 2000,

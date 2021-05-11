@@ -152,3 +152,11 @@ export const getTopMenuProps = ({packs, state, actions, ...page}: Props<any, Pac
     }
 
 }
+
+/**
+ * can get props for any screen using switch, but this is not particularly useful without a clearly defined return type
+ * would need a complicated TS lookup type to make it useful
+ */
+export const getScreenProps = <L, P extends PackStatic<L>>(props: Props<any, P> & {page: AppPage}) => {
+
+}

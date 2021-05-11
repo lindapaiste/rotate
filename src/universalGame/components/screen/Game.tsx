@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createContext, useContext} from "react";
 import {Screen} from "./Screen";
 import {GameProps} from "../types-game";
 import {PersistGate} from "redux-persist/integration/react";
@@ -44,6 +44,9 @@ export const Game = <S extends {}, P extends PackStatic<any>>({initialSettings, 
                     loading={<RenderAppLoading/>}
                     onBeforeLift={() => undefined}
                 >
+                    <ActionsContext.Provider
+                        value={makeActions(store.dispatch)}
+                    >
                     <Screen
                         {...props}
                         packs={packs}
@@ -51,8 +54,21 @@ export const Game = <S extends {}, P extends PackStatic<any>>({initialSettings, 
                         dispatch={store.dispatch}
                         actions={makeActions(store.dispatch)}
                     />
+                    </ActionsContext.Provider>
                 </PersistGate>
             </ReduxProvider>
         </PaperProvider>
     )
 }
+
+/**
+ * don't need state in a GameContext because use ReduxProvider for that to avoid getting stale state
+ * packs and actions don't change, so that's not an issue
+ * could share a provider, but using separate ones
+ */
+
+const ActionsContext = createContext(makeActions((action) => console.error("attempting to call action outside of a context provider", action)));
+
+export const useActions = () => useContext(ActionsContext);
+
+const PacksContext = createContext([]);

@@ -1,5 +1,5 @@
 import React from "react";
-import {View} from "react-native";
+import {ScrollView, View} from "react-native";
 import {GridProps} from "./types";
 import * as styles from "../styles";
 
@@ -9,14 +9,19 @@ import * as styles from "../styles";
  */
 export const LevelsGrid = <T extends any>({levels, size, RenderThumb, onPressLevel, aspectRatio, style}: GridProps<T>) => {
     return (
-        <View
-            style={[{
+        <ScrollView
+            style={{
+                flex: 1,
+            }}
+            contentContainerStyle={[{
+                flex: 1,
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "wrap",
                 justifyContent: "center",
-                marginTop: "5%",
-            }, style]}
+                paddingVertical: "5%",
+            }, style
+            ]}
         >
             {levels.map((best, levelId) => (
                 <View
@@ -40,6 +45,6 @@ export const LevelsGrid = <T extends any>({levels, size, RenderThumb, onPressLev
                     />
                 </View>
             ))}
-        </View>
+        </ScrollView>
     )
 };

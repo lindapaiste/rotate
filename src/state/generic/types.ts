@@ -18,7 +18,7 @@ export interface LevelLayout {
  * the level state, which gets flushed on every new level
  * arrays tiles and rotations are expected to be in the same order, where the index is the tile id
  */
-export interface LevelState<T> {
+export interface LevelState<T = any> {
     /**
      * properties of the grid
      */
@@ -59,7 +59,7 @@ export interface LevelState<T> {
 /**
  * infer the type of tile data from the state
  */
-export type TileData<S extends LevelState<any>> = S extends LevelState<infer T> ? T : never;
+export type TileData<S extends LevelState> = S extends LevelState<infer T> ? T : never;
 
 /**
  * all of these values will not change during the duration of the level
@@ -98,4 +98,5 @@ export interface MovesTime {
 export interface Hint {
     id: number;
     rotations: number;
+    penalty?: number;
 }

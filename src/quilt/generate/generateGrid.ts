@@ -2,7 +2,7 @@ import {I_Size, PropTileSize} from "../../grid/types";
 import {makeArray, random, randomHexes, sample} from "../../lib";
 import {SideColors} from "../tile/types";
 import {QuiltState} from "../../state/quilt/types";
-import {newLevelState} from "../../state/generic/emptyState";
+import {newLevelState} from "../../state/generic/initialState";
 import {InitialTile} from "../../state/generic/types";
 import {CreationProps, GridColors} from "./types";
 
